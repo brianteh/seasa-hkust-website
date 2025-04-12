@@ -22,7 +22,6 @@ function App() {
       <Merch2 />
       <Exco />
       <Timeline />
-      <Contact />
       <Footer />
     </>
   )
