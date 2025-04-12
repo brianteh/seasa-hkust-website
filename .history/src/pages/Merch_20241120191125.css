@@ -1,0 +1,113 @@
+.merch-container {
+    position: relative; /* Enable positioning for child elements */
+    display: flex;
+    flex-direction: row;
+    height: 100vh; /* Adjust height as needed */
+    margin: 2em auto;
+}
+
+.image-column {
+    flex: 0 0 75%; 
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.merch-image {
+    max-width: 100%;
+    height: auto; 
+}
+
+.info-column {
+    flex: 1; 
+    background-color: white; 
+}
+
+.overlay {
+    position: absolute; 
+    top: 30%; 
+    left: 65%; 
+    padding: 1em; 
+    text-align: left; 
+}
+
+.overlay h2{
+    font-size: 3em;
+    letter-spacing: 0.1em;
+}
+
+.mainheader{
+    background-color: rgb(255, 255, 255);
+    padding-left: 0.5em; 
+}
+
+.subheader{
+    padding-left: 0.5em;
+}
+
+.merch-container1 {
+    display: flex;
+    flex-direction: row; /* Align children in a row */
+    height: 100vh; /* Adjust height as needed */
+    margin: 1em auto;
+}
+
+.info-column1 {
+    flex: 0 0 60%; /* Take up 40% of the width */
+    background-color: white; /* Optional: for better visibility */
+    padding: 20px; /* Add padding for spacing */
+    display: flex;
+    flex-direction: column;
+    justify-content: center; /* Center content vertically */
+    align-items: flex-start; /* Align text to the left */
+}
+
+.merch-image1 {
+    max-width: 100%; /* Ensure the image is responsive */
+    height: auto; /* Maintain aspect ratio */
+}
+
+.image-column1 {
+    flex: 0 0 30%; /* Increase to 30% of the width */
+    display: flex;
+    justify-content: center; /* Center the image horizontally */
+    align-items: center; /* Center the image vertically */
+    position: relative; /* Set position to relative */
+}
+
+.overlay1 {
+    position: absolute; /* Keep overlay absolute */
+    top: 20%; /* Adjust this as needed */
+    left: 10%; /* Adjust this as needed */
+    background-color: rgba(255, 255, 255, 0.8); /* Semi-transparent background */
+    padding: 20px; /* Padding for the overlay content */
+    border-radius: 8px; /* Optional: rounded corners */
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2); /* Optional: shadow for depth */
+    text-align: center; /* Center text within the overlay */
+    z-index: 1; /* Ensure overlay appears above the image */
+}
+
+.overlay-title1 {
+    font-size: 2rem; /* Size of the heading */
+    font-weight: bold; /* Bold heading */
+    margin: 0; /* Remove default margin */
+}
+
+.overlay-details1 {
+    margin: 10px 0; /* Space between title and details */
+}
+
+.order-button1 {
+    background-color: #4f46e5; /* Button background color */
+    color: white; /* Button text color */
+    border: none; /* Remove default border */
+    padding: 10px 20px; /* Padding for the button */
+    border-radius: 5px; /* Rounded corners */
+    cursor: pointer; /* Pointer cursor on hover */
+    font-size: 1rem; /* Button text size */
+    transition: background-color 0.3s; /* Transition for hover effect */
+}
+
+.order-button1:hover {
+    background-color: #3730a3; /* Darker shade on hover */
+}

@@ -1,0 +1,52 @@
+.merch-container1 {
+    display: flex;
+    position: relative;
+    padding: 3em;
+    height: 100vh;
+}
+
+.info-column1 {
+    flex: 1; /* Allows this column to take available space */
+    padding: 20px;
+    position: relative;
+    z-index: 1; /* Ensure it sits above the image */
+}
+
+.overlay1 {
+    position: absolute; /* Position relative to the container */
+    left: 18%; /* Adjust to center the overlay */
+    top: 25%; /* Adjust vertical position */
+    width: 500px; /* Set width for the overlay */
+    padding: 3em;
+    z-index: 2; /* Ensure it overlaps the image */
+    text-align: center; /* Center justify the text */
+    border: 1em solid gray;
+}
+
+.image-column1 {
+    flex: 1; /* Allows the image column to take available space */
+    display: flex; /* Center the image */
+    justify-content: flex-end; /* Align image to the right */
+    align-items: center;
+}
+
+.merch-image1 {
+    margin-right: 10em; /* Adjust margin for spacing */
+    max-width: 30%; /* Adjusted to allow more visibility */
+    height: auto; /* Maintain aspect ratio */
+}
+
+.overlay-title1{
+    font-weight: bolder;
+    font-size: 2em;
+    margin-bottom: 0.3em;
+}
+
+.order-button1{
+    background-color: rgb(54, 54, 54); 
+    color: white;
+    padding: 0.5em 0.8em;
+    border-radius: 2em;
+    width: auto;
+    margin-top: 1em;
+}

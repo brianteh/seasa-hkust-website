@@ -1,0 +1,74 @@
+.merch-container {
+    position: relative; /* Enable positioning for child elements */
+    display: flex;
+    flex-direction: row;
+    height: 100vh; /* Adjust height as needed */
+    margin: 2em auto;
+}
+
+.image-column {
+    flex: 0 0 75%; 
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.merch-image {
+    max-width: 100%;
+    height: auto; 
+}
+
+.info-column {
+    flex: 1; 
+    background-color: white; 
+}
+
+.overlay {
+    position: absolute; 
+    top: 30%; 
+    left: 65%; 
+    padding: 1em; 
+    text-align: left; 
+}
+
+.overlay h2{
+    font-size: 3em;
+    letter-spacing: 0.1em;
+}
+
+.mainheader{
+    background-color: rgb(255, 255, 255);
+    padding-left: 0.5em; 
+}
+
+.subheader{
+    padding-left: 0.5em;
+}
+
+.merch-container1 {
+    display: flex;
+    flex-direction: row; /* Align children in a row */
+    height: 100vh; /* Adjust height as needed */
+}
+
+.info-column1 {
+    flex: 0 0 40%; /* Take up 40% of the width */
+    background-color: white; /* Optional: for better visibility */
+    padding: 20px; /* Add padding for spacing */
+    display: flex;
+    flex-direction: column;
+    justify-content: center; /* Center content vertically */
+    align-items: flex-start; /* Align text to the left */
+}
+
+.image-column1 {
+    flex: 0 0 30%; /* Increase to 60% of the width */
+    display: flex;
+    justify-content: center; /* Center the image horizontally */
+    align-items: center; /* Center the image vertically */
+}
+
+.merch-image1 {
+    max-width: 100%; /* Ensure the image is responsive */
+    height: auto; /* Maintain aspect ratio */
+}

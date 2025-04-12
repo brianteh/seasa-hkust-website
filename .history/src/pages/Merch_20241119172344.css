@@ -1,0 +1,36 @@
+.merch-container {
+    position: relative; /* Enable positioning for child elements */
+    display: flex;
+    flex-direction: row;
+    height: 100vh; /* Adjust height as needed */
+}
+
+.image-column {
+    flex: 0 0 75%; 
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.merch-image {
+    max-width: 100%;
+    height: auto; 
+}
+
+.info-column {
+    flex: 1; 
+    background-color: white; 
+}
+
+.overlay {
+    position: absolute; 
+    top: 30%; 
+    left: 70%; 
+    background-color: rgb(255, 255, 255); 
+    padding: 1em; 
+    text-align: left; 
+}
+
+.overlay h2{
+    font-size: 3em;
+}
