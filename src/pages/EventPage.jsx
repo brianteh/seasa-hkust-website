@@ -2,8 +2,7 @@ export const EventPage = () => {
     return (
         <>
             <h1>
-                aefaerwerawefawef
-                hello ahhahha
+                hello world
             </h1>
         
         </>
