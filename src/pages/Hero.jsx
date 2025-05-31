@@ -75,7 +75,7 @@ const Hero = () => {
 
       
 
-      <div className="relative">
+      <div className="relative pb-12">
         <img src={shapeleft} className="absolute -top-60 left-0  w-1/2 opacity-50 z-[-1]"/>
         {/* <Lottie animationData={animationData} />  */}
         {/* <img src={group} className="absolute object-cover w-3/4 h-96 -top-60 left-1/2 -translate-x-1/2 translate-y-1/4 rounded-lg"/> */}

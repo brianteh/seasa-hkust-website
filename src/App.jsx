@@ -9,20 +9,35 @@ import Exco from './pages/Exco'
 import Timeline from './pages/Timeline'
 import Merch from './pages/Merch'
 import Merch2 from'./pages/Merch2'
+import EventPage from './pages/EventPage'
+
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom'
 
 function App() {
   return (
     <>
-    
-      <Navbar />
-      <Hero />
-      <About />
-      <Event />
-      <Merch />
-      <Merch2 />
-      <Exco />
-      <Timeline />
-      <Footer />
+      <Router>
+        <Routes>
+        <Route path="/" element={
+          //Main page
+          <>
+            <Navbar />
+            <Hero />
+            <About />
+            <Event />
+            <Merch />
+            <Merch2 />
+            <Exco />
+            <Timeline />
+            <Footer /> 
+          </>
+        }/>
+        <Route path="/events" element={
+          //Event Page
+          <EventPage/>
+        }/>
+        </Routes>
+      </Router>
     </>
   )
 }
