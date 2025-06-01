@@ -18,8 +18,8 @@ const Event = () => {
           </div>
       </div>
       <div className='grid lg:grid-cols-3 md:grid-cols-2 grid-cols-1 m-5'>
-          <Card eventimage={Oday} eventname={"SEASA O-Day"} eventdesc={"SEASA welcomes you to HKUST with a fun night of games, making friends, and of course, free food!"} event_ig_link={"https://youtube.com"}/>
-          <Card eventimage={SuperSmash} eventname={"SEASA Super Smash Go"} eventdesc={"Showcase your badminton skills and challenge other players!"} event_ig_link={"https://youtube.com"}/>
+          <Card eventimage={Oday} eventname={"SEASA O-Day"} eventdesc={"SEASA welcomes you to HKUST with a fun night of games, making friends, and of course, free food!"} event_link={"https://youtube.com"}/>
+          <Card eventimage={SuperSmash} eventname={"SEASA Super Smash Go"} eventdesc={"Showcase your badminton skills and challenge other players!"} event_link={"https://youtube.com"}/>
       </div>
 
       {/*Learn more button => links to /events*/}

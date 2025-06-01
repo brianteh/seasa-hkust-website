@@ -10,6 +10,7 @@ import Timeline from '/src/pages/Timeline'
 import Merch from '/src/pages/Merch'
 import Merch2 from'/src/pages/Merch2'
 import EventPage from '/src/pages/EventPage'
+import CurrentEvent from '/src/pages/CurrentEvent'
 
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom'
 
@@ -24,6 +25,7 @@ function App() {
             <Navbar />
             <Hero />
             <About />
+            <CurrentEvent/>
             <Event />
             <Merch />
             <Merch2 />
