@@ -1,5 +1,5 @@
 import React from "react";
-import ServiceCard from "../components/AboutCard";
+import ServiceCard from "/src/components/AboutCard";
 import {FaGlobeAmericas} from "react-icons/fa"
 import {BsPeopleFill} from "react-icons/bs"
 import {TbTargetArrow} from "react-icons/tb"

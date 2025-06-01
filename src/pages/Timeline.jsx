@@ -1,12 +1,12 @@
 import React from 'react'
-import LeftTimeline from '../components/LeftTimeline'
-import RightTimeline from '../components/RightTimeline'
+import LeftTimeline from '/src/components/LeftTimeline'
+import RightTimeline from '/src/components/RightTimeline'
 
 //images
-import Interview from "../assets/timeline/interview.jpg"
-import Notification from "../assets/timeline/notification.jpg"
-import Selection from "../assets/timeline/selection.jpg"
-import Training from "../assets/timeline/training.jpg"
+import Interview from "/src/assets/timeline/interview.jpg"
+import Notification from "/src/assets/timeline/notification.jpg"
+import Selection from "/src/assets/timeline/selection.jpg"
+import Training from "/src/assets/timeline/training.jpg"
 
 
 const Timeline = () => {

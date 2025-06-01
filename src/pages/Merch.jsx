@@ -1,7 +1,7 @@
 import React from 'react'
-import '../pages/Merch.css' 
+import '/src/pages/Merch.css' 
 
-import merchImage from '../assets/merch/merch3.png'
+import merchImage from '/src/assets/merch/merch3.png'
 
 const Merch = () => {
     return (

@@ -1,5 +1,5 @@
 import React from 'react'
-import temp from "../assets/default.jpg"
+import temp from "/src/assets/default.jpg"
 
 const Card = ({eventimage, eventname, eventdesc,event_ig_link}) => {
   {/* NOTE: event_ig_link should show start with 'https://' as prefix */}

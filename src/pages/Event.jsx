@@ -1,11 +1,11 @@
 import React from 'react'
-import Card from '../components/EventCard'
+import Card from '/src/components/EventCard'
 import { useNavigate } from "react-router-dom"
 
 //Images
-import Orientation from "../assets/events/orientation.jpg"
-import Oday from "../assets/events/ODAY/odaythumbnail.jpg"
-import SuperSmash from "../assets/events/SUPERSMASH/thumbnail.jpg"
+import Orientation from "/src/assets/events/orientation.jpg"
+import Oday from "/src/assets/events/ODAY/odaythumbnail.jpg"
+import SuperSmash from "/src/assets/events/SUPERSMASH/thumbnail.jpg"
 
 const Event = () => {
   const navigate = useNavigate();

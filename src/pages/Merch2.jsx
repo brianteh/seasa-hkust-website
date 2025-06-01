@@ -1,6 +1,6 @@
 import React from 'react';
-import '../pages/Merch2.css'; 
-import merchImage from '../assets/merch/merch2.png';
+import '/src/pages/Merch2.css'; 
+import merchImage from '/src/assets/merch/merch2.png';
 
 const Merch2 = () => {
     return (

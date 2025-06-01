@@ -1,5 +1,5 @@
 import React from 'react'
-import temp from "../assets/default.jpg"
+import temp from "/src/assets/default.jpg"
 
 const Modal = ({visible, onClose}) => {
     if (!visible){

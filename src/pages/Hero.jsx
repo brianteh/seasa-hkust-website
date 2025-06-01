@@ -1,16 +1,16 @@
 import Lottie from "lottie-react"
 import React, {useState} from 'react'
-import animationData from "../assets/animation_hero.json"
-import Modal from "../components/Modal";
+import animationData from "/src/assets/animation_hero.json"
+import Modal from "/src/components/Modal";
 
 //images
 // import Hero
-import test from "../assets/test.png"
-import temp from "../assets/default.jpg"
-import group from "../assets/group.jpg"
-import shapeleft from "../assets/shape-left.png"
-import shaperight from "../assets/shape-right.png"
-import homepic from "../assets/events/ODAY/odayclosing.jpg"
+import test from "/src/assets/test.png"
+import temp from "/src/assets/default.jpg"
+import group from "/src/assets/group.jpg"
+import shapeleft from "/src/assets/shape-left.png"
+import shaperight from "/src/assets/shape-right.png"
+import homepic from "/src/assets/events/ODAY/odayclosing.jpg"
 
 const Hero = () => {
   let [myModal, setMyModal] = useState(false)

@@ -1,7 +1,7 @@
 import React, { useState } from 'react'
 import { Link } from "react-scroll"
 import { TbSquareLetterS } from "react-icons/tb"
-import NavLogo from "../assets/SEASALogo.png"
+import NavLogo from "/src/assets/SEASALogo.png"
 
 
 const Navbar = () => {
