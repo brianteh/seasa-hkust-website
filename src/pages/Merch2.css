@@ -1,52 +1,133 @@
 .merch-container1 {
-    display: flex;
     position: relative;
-    padding: 3em;
-    height: 100vh;
+    width: 100%;
+    padding: 3em 1em;
+    overflow: hidden;
 }
 
-.info-column1 {
-    flex: 1; /* Allows this column to take available space */
-    padding: 20px;
+.content-wrapper1 {
     position: relative;
-    z-index: 1; /* Ensure it sits above the image */
+    max-width: 1400px;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    min-height: 500px;
 }
 
 .overlay1 {
-    position: absolute; /* Position relative to the container */
-    left: 19%; /* Adjust to center the overlay */
-    top: 25%; /* Adjust vertical position */
-    width: 500px; /* Set width for the overlay */
-    padding: 3em;
-    z-index: 2; /* Ensure it overlaps the image */
-    text-align: center; /* Center justify the text */
-    border: 1em solid gray;
+    position: absolute;
+    left: 10%;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 40%;
+    max-width: 500px;
+    padding: 2em;
+    z-index: 2;
+    text-align: center;
+    border: 0.5em solid gray;
+    background-color: white;
 }
 
 .image-column1 {
-    flex: 1; /* Allows the image column to take available space */
-    display: flex; /* Center the image */
-    justify-content: flex-end; /* Align image to the right */
+    position: relative;
+    width: 100%;
+    display: flex;
+    justify-content: flex-end;
     align-items: center;
 }
 
 .merch-image1 {
-    margin-right: 10em; /* Adjust margin for spacing */
-    max-width: 30%; /* Adjusted to allow more visibility */
-    height: auto; /* Maintain aspect ratio */
+    max-width: 30%;
+    height: auto;
+    display: block;
+    margin-right: 10%;
 }
 
-.overlay-title1{
+.overlay-title1 {
     font-weight: bolder;
-    font-size: 2em;
+    font-size: clamp(1.5rem, 4vw, 2rem);
     margin-bottom: 0.3em;
 }
 
-.order-button1{
-    background-color: rgb(54, 54, 54); 
+.overlay-details1 {
+    font-size: clamp(1rem, 2vw, 1.2rem);
+    margin-bottom: 1em;
+}
+
+.order-button1 {
+    background-color: rgb(54, 54, 54);
     color: white;
-    padding: 0.5em 0.8em;
+    padding: 0.5em 1em;
     border-radius: 2em;
-    width: auto;
-    margin-top: 1em;
+    font-size: clamp(0.8rem, 1.5vw, 1rem);
+    border: none;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.order-button1:hover {
+    background-color: rgb(80, 80, 80);
+}
+
+/* Media queries for responsive design */
+@media screen and (max-width: 1200px) {
+    .overlay1 {
+        width: 45%;
+        padding: 1.5em;
+    }
+    
+    .merch-image1 {
+        max-width: 35%;
+    }
+}
+
+@media screen and (max-width: 992px) {
+    .overlay1 {
+        width: 50%;
+        padding: 1.2em;
+        border-width: 0.4em;
+    }
+    
+    .merch-image1 {
+        max-width: 40%;
+        margin-right: 5%;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .content-wrapper1 {
+        flex-direction: column-reverse;
+        padding: 2em 0;
+    }
+    
+    .overlay1 {
+        position: relative;
+        width: 80%;
+        left: auto;
+        top: auto;
+        transform: none;
+        margin: -3em auto 0;
+    }
+    
+    .image-column1 {
+        justify-content: center;
+        margin-bottom: 1em;
+    }
+    
+    .merch-image1 {
+        max-width: 60%;
+        margin-right: 0;
+    }
+}
+
+@media screen and (max-width: 576px) {
+    .overlay1 {
+        width: 90%;
+        padding: 1em;
+        border-width: 0.3em;
+    }
+    
+    .merch-image1 {
+        max-width: 80%;
+    }
 }

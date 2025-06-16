@@ -1,47 +1,106 @@
 .merch-container {
-    position: relative; /* Enable positioning for child elements */
-    display: flex;
-    flex-direction: row;
-    height: 100vh; /* Adjust height as needed */
-    margin: 2em auto;
+    width: 100%;
+    position: relative;
+    padding: 2rem 0;
+    overflow: hidden;
 }
 
-.image-column {
-    flex: 0 0 75%; 
-    display: flex;
-    justify-content: center;
-    align-items: center;
+.merch-content {
+    width: 100%;
+    max-width: 1400px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: 3fr 1fr;
+    position: relative;
+}
+
+.merch-image-container {
+    width: 100%;
+    overflow: hidden;
 }
 
 .merch-image {
-    max-width: 100%;
-    height: auto; 
+    width: 100%;
+    height: auto;
+    display: block;
 }
 
 .info-column {
-    flex: 1; 
-    background-color: white; 
+    background-color: white;
 }
 
 .overlay {
-    position: absolute; 
-    top: 30%; 
-    left: 65%; 
-    padding: 1em; 
-    text-align: left; 
+    position: absolute;
+    top: 30%;
+    right: 15%;
+    z-index: 10;
+    pointer-events: none; /* Ensure it doesn't interfere with clicks */
 }
 
-.overlay h2{
-    font-size: 3em;
+.mainheader {
+    font-size: 3rem;
     letter-spacing: 0.1em;
-}
-
-.mainheader{
     background-color: rgb(255, 255, 255);
-    padding-left: 0.5em; 
-}
-
-.subheader{
     padding-left: 0.5em;
+    white-space: nowrap;
+    margin-bottom: 0.2em;
 }
 
+.subheader {
+    font-size: 3rem;
+    letter-spacing: 0.1em;
+    padding-left: 0.5em;
+    white-space: nowrap;
+}
+
+/* Media queries for responsive design */
+@media screen and (max-width: 1200px) {
+    .mainheader, .subheader {
+        font-size: 2.5rem;
+    }
+    .overlay {
+        right: 20%;
+    }
+}
+
+@media screen and (max-width: 992px) {
+    .mainheader, .subheader {
+        font-size: 2rem;
+    }
+    .overlay {
+        right: 15%;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .merch-content {
+        grid-template-columns: 4fr 1fr;
+    }
+    .mainheader, .subheader {
+        font-size: 1.75rem;
+    }
+    .overlay {
+        right: 10%;
+    }
+}
+
+@media screen and (max-width: 576px) {
+    .merch-content {
+        grid-template-columns: 1fr;
+    }
+    .info-column {
+        display: none;
+    }
+    .mainheader, .subheader {
+        font-size: 1.5rem;
+    }
+    .overlay {
+        right: 5%;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .mainheader, .subheader {
+        font-size: 1.25rem;
+    }
+}
