@@ -12,6 +12,7 @@ import EventPage from '/src/pages/EventPage'
 import CurrentEvent from '/src/pages/CurrentEvent'
 
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom'
+import Contact from './pages/Contact'
 
 function App() {
   return (
@@ -30,6 +31,7 @@ function App() {
             <Merch2 />
             <Exco />
             <Timeline />
+            <Contact />
             <Footer /> 
           </>
         }/>
