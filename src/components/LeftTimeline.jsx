@@ -8,7 +8,7 @@ const LeftTimeline = ({timelinedate, timelineimage, timelinetitle, timelinedesc}
             <div className="z-20 flex flex-col items-center justify-center order-1 border-solid border-2 border-cyan-900 bg-white shadow-xl w-40 h-40 rounded-full font-semibold text-cyan-900">
                 {/* <img src={timelineimage} className="object-cover w-36 h-36 rounded-full"></img> */}
                 <h1 className="text-2xl">{timelinedate}</h1>
-                <p>2024</p>
+                <p>2025</p>
             </div>
             <div class="order-1 bg-red-400 rounded-lg shadow-xl w-5/12 px-6 py-4">
                 <h3 class="mb-3 font-bold text-white text-xl">{timelinetitle}</h3>
