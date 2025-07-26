@@ -55,7 +55,7 @@ const Hero = () => {
                   duration={500}
                   className='rounded-md text-black border-transparent py-2 px-4 md:ml-8 hover:bg-white border-solid border-2 hover:border-black hover:text-black duration-500 cursor-pointer'
                 >
-                  Learn more <span aria-hidden="true">→</span>
+                  Connect With Us <span aria-hidden="true">→</span>
                 </Link>
               </div>
             </div>

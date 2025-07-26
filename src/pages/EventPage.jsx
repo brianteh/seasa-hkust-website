@@ -9,7 +9,7 @@ export const EventPage = () => {
             <div className="flex justify-center">
                     <div className="text-center md:max-w-xl lg:max-w-3xl ">
                         <h2 className="mt-6 px-6 text-4xl font-semibold">2025 Events</h2>
-                        <h3 className="mt-6">Click the images to find out more in detail of each event.</h3>
+                        <h3 className="mt-6">Happiness prevails this year.</h3>
                     </div>
                 </div>
             <div className='grid lg:grid-cols-3 md:grid-cols-2 grid-cols-1 m-5'>
@@ -29,7 +29,7 @@ export const EventPage = () => {
             <div className="flex justify-center">
                 <div className="text-center md:max-w-xl lg:max-w-3xl ">
                     <h2 className="mt-6 px-6 text-4xl font-semibold">2024 Events</h2>
-                    <h3 className="mt-6">Click the images to find out more in detail of each event.</h3>
+                    <h3 className="mt-6">Best year ever!</h3>
                 </div>
             </div>
             <div className='grid lg:grid-cols-3 md:grid-cols-2 grid-cols-1 m-5'>
