@@ -10,7 +10,7 @@ const Merch2 = () => {
                     <h1 className="overlay-title1">Varsity Jacket</h1>
                     <p className="overlay-details1">Our official merchandise is now on sale.</p>
                     <a 
-                        href="https://www.youtube.com" 
+                        href="https://forms.gle/YtjjmgWmVbzdBqye6" 
                         target="_blank" 
                         rel="noopener noreferrer" 
                         className="button-link"
