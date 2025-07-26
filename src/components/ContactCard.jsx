@@ -1,23 +1,22 @@
-import React from 'react'
+import React from 'react';
 
-const ContactCard = ({symbol, title, answer}) => {
+const ContactCard = ({ symbol, title, answer, link }) => {
   return (
-    <div className="p-5 bg-white shadow-md rounded-lg border border-gray-100 hover:shadow-lg transition-shadow">
-        <div className="flex items-center">
-            <div className="rounded-full bg-indigo-100 p-3 flex items-center justify-center">
-                {symbol}
-            </div>
-            <div className="ml-4">
-                <p className="font-semibold text-gray-800">
-                    {title}
-                </p>
-                <p className="text-gray-600 mt-1">
-                    {answer}
-                </p>
-            </div>
+    <a 
+      href={link} 
+      target="_blank" 
+      rel="noopener noreferrer"
+      className="block p-6 bg-white rounded-lg shadow-md hover:shadow-lg transition-shadow duration-300"
+    >
+      <div className="flex items-center mb-4">
+        <div className="mr-4">
+          {symbol}
         </div>
-    </div>
-  )
-}
+        <h3 className="font-semibold text-lg">{title}</h3>
+      </div>
+      <p className="text-gray-600">{answer}</p>
+    </a>
+  );
+};
 
-export default ContactCard
+export default ContactCard;
