@@ -27,8 +27,8 @@ export const EventPage = () => {
                 </div>
             </div>
             <div className='grid lg:grid-cols-3 md:grid-cols-2 grid-cols-1 m-5'>
-               <Card eventimage={sea_odyssey_2024} eventname={"SEASA Odyssey"} eventdesc={""} event_link={"https://www.instagram.com/stories/highlights/17993240585226510/"}/>
-                <Card eventimage={sports_week_2024} eventname={"SEASA Sports Week"} eventdesc={""} event_link={"https://www.instagram.com/p/C0jso1xBkZR/?img_index=1"}/>
+               <Card eventimage={sea_odyssey_2024} eventname={"SEASA Odyssey"} eventdesc={"New people, new environment, new odyssey"} event_link={"https://www.instagram.com/stories/highlights/17993240585226510/"}/>
+                <Card eventimage={sports_week_2024} eventname={"SEASA Sports Week"} eventdesc={"A week fill with sports is a dope week"} event_link={"https://www.instagram.com/p/C0jso1xBkZR/?img_index=1"}/>
             </div>
         
         </>
