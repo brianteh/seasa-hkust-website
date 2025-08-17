@@ -11,7 +11,7 @@ import sea_connect_2025 from "/src/assets/events/SEA_CONNECT/sea_connect_2025.jp
 const Event = () => {
   const navigate = useNavigate();
   return (
-    <div className='bg-gradient-to-b from-white to-gray-100' id='events'>
+    <div className='bg-gradient-to-b from-white to-gray-100'>
       <div className="flex justify-center">
           <div className="text-center md:max-w-xl lg:max-w-3xl ">
               <h2 className="mt-6 px-6 text-4xl font-semibold">Past Events</h2>
