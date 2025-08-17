@@ -5,13 +5,18 @@
     overflow: hidden;
 }
 
-.merch-content {
+/* Desktop and Tablet Layout */
+.merch-content.desktop-tablet {
     width: 100%;
     max-width: 1400px;
     margin: 0 auto;
     display: grid;
     grid-template-columns: 3fr 1fr;
     position: relative;
+}
+
+.merch-content.mobile {
+    display: none;
 }
 
 .merch-image-container {
@@ -32,9 +37,9 @@
 .overlay {
     position: absolute;
     top: 30%;
-    right: 15%;
+    right: 5%;
     z-index: 10;
-    pointer-events: none; /* Ensure it doesn't interfere with clicks */
+    pointer-events: none;
 }
 
 .mainheader {
@@ -53,13 +58,50 @@
     white-space: nowrap;
 }
 
-/* Media queries for responsive design */
+/* Mobile Layout Styles */
+.mobile-overlay {
+    text-align: center;
+    padding: 2rem 1rem;
+    background-color: white;
+    margin: 0 1rem;
+    border-radius: 10px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+}
+
+.mobile-mainheader {
+    font-size: 2rem;
+    letter-spacing: 0.1em;
+    margin-bottom: 0.5rem;
+    font-weight: normal;
+}
+
+.mobile-subheader {
+    font-size: 2rem;
+    letter-spacing: 0.1em;
+    font-weight: bold;
+    line-height: 1.2;
+}
+
+.mobile-image-container {
+    margin-top: 2rem;
+    padding: 0 1rem;
+}
+
+.mobile-merch-image {
+    width: 100%;
+    height: auto;
+    display: block;
+    border-radius: 10px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+}
+
+/* Tablet Responsive Design */
 @media screen and (max-width: 1200px) {
     .mainheader, .subheader {
         font-size: 2.5rem;
     }
     .overlay {
-        right: 20%;
+        right: 10%;
     }
 }
 
@@ -68,39 +110,80 @@
         font-size: 2rem;
     }
     .overlay {
-        right: 15%;
+        right: 8%;
+        top: 25%;
+    }
+    .merch-content.desktop-tablet {
+        grid-template-columns: 4fr 1fr;
     }
 }
 
+/* Mobile Breakpoint */
 @media screen and (max-width: 768px) {
-    .merch-content {
-        grid-template-columns: 4fr 1fr;
+    /* Hide desktop/tablet layout */
+    .merch-content.desktop-tablet {
+        display: none;
     }
-    .mainheader, .subheader {
-        font-size: 1.75rem;
+    
+    /* Show mobile layout */
+    .merch-content.mobile {
+        display: block;
+        width: 100%;
+        max-width: 600px;
+        margin: 0 auto;
+        padding: 1rem;
     }
-    .overlay {
-        right: 10%;
+    
+    .mobile-mainheader {
+        font-size: 1.8rem;
+    }
+    
+    .mobile-subheader {
+        font-size: 1.8rem;
     }
 }
 
 @media screen and (max-width: 576px) {
-    .merch-content {
-        grid-template-columns: 1fr;
+    .mobile-overlay {
+        margin: 0 0.5rem;
+        padding: 1.5rem;
     }
-    .info-column {
-        display: none;
-    }
-    .mainheader, .subheader {
+    
+    .mobile-mainheader {
         font-size: 1.5rem;
     }
-    .overlay {
-        right: 5%;
+    
+    .mobile-subheader {
+        font-size: 1.5rem;
+    }
+    
+    .mobile-image-container {
+        padding: 0 0.5rem;
+        margin-top: 1.5rem;
     }
 }
 
 @media screen and (max-width: 480px) {
-    .mainheader, .subheader {
-        font-size: 1.25rem;
+    .mobile-mainheader {
+        font-size: 1.3rem;
+    }
+    
+    .mobile-subheader {
+        font-size: 1.3rem;
+    }
+    
+    .mobile-overlay {
+        padding: 1rem;
+    }
+}
+
+/* Small mobile devices */
+@media screen and (max-width: 360px) {
+    .mobile-mainheader {
+        font-size: 1.1rem;
+    }
+    
+    .mobile-subheader {
+        font-size: 1.1rem;
     }
 }
