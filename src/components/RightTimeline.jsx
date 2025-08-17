@@ -1,22 +1,36 @@
-import React from "react"
+import React from 'react'
 
-const RightTimeline = ({timelinedate, timelineimage, timelinetitle, timelinedesc}) => {
-    return (
-        <div className="mb-20 flex justify-between items-center w-full right-timeline">
-            <div className="order-1 w-5/12"></div>
-            <div className="z-20 flex flex-col items-center justify-center order-1 bg-cyan-900 shadow-xl w-40 h-40 rounded-full text-white font-semibold">
-                <h1 className="text-2xl">{timelinedate} </h1>
-                <p>2025</p>
-                {/* <img src={timelineimage} className="object-cover w-36 h-36 rounded-full"></img> */}
+const RightTimeline = ({ timelinedate, timelineimage, timelinetitle, timelinedesc }) => {
+  return (
+    <div className="mb-16 flex justify-between items-center w-full right-timeline">
+      <div className="order-1 w-5/12"></div>
+      
+      {/* Circle indicator for timeline */}
+      <div className="z-20 flex items-center order-1 bg-gray-800 shadow-xl w-6 h-6 rounded-full">
+        <h1 className="mx-auto font-semibold text-lg text-white">•</h1>
+      </div>
+      
+      {/* Card with content */}
+      <div className="order-1 bg-white rounded-lg shadow-xl w-5/12 px-3 py-3 md:px-6 md:py-4 relative">
+        {/* Date badge - adjusted positioning for mobile */}
+        {timelinedate && (
+          <div className="absolute -top-4 -right-2 md:-top-6 md:-right-6 z-30">
+            <div className="bg-indigo-600 text-white px-3 py-1 md:px-5 md:py-2 rounded-full font-bold text-xs md:text-base shadow-lg whitespace-nowrap">
+              {timelinedate}
             </div>
-            <div className="order-1 bg-indigo-600 rounded-lg shadow-xl w-5/12 px-6 py-4">
-                <h3 className="mb-3 font-bold text-white text-xl">{timelinetitle}</h3>
-                <p className="text-sm leading-snug tracking-wide text-white text-opacity-100">
-                    {timelinedesc}
-                </p>
-            </div>
+          </div>
+        )}
+        
+        <div className="flex flex-col md:flex-row gap-3 items-start md:items-center">
+          <img src={timelineimage} className="w-full md:w-1/3 rounded object-cover object-center" />
+          <div>
+            <h3 className="mb-1 md:mb-3 font-bold text-gray-800 text-base md:text-xl">{timelinetitle}</h3>
+            <p className="text-sm md:text-base leading-snug tracking-wide text-gray-600 text-opacity-100">{timelinedesc}</p>
+          </div>
         </div>
-    )
+      </div>
+    </div>
+  )
 }
 
 export default RightTimeline

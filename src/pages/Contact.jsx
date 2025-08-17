@@ -97,7 +97,7 @@ const Contact = () => {
                   rel="noopener noreferrer"
                   className="text-gray-600 hover:text-gray-800 transition-colors"
                 >
-                  Linkedin
+                  LinkedIn
                 </a>
               </li>
               <li>
