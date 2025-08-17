@@ -1,4 +1,4 @@
-import CurrentEventPicture from "/src/assets/events/ODAY/odaythumbnail.jpg"
+import CurrentEventPicture from "/src/assets/events/ODAY/odaythumbnail_2024.jpg"
 
 export const CurrentEvent = () =>{
     const event_link = "https://youtube.com"

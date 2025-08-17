@@ -6,11 +6,11 @@ import { Link } from "react-scroll"
 
 //images
 import test from "/src/assets/test.png"
-import temp from "/src/assets/default.jpg"
-import group from "/src/assets/group.jpg"
+// import temp from "/src/assets/default.jpg"
+// import group from "/src/assets/group.jpg"
 import shapeleft from "/src/assets/shape-left.png"
 import shaperight from "/src/assets/shape-right.png"
-import homepic from "/src/assets/events/ODAY/odayclosing.jpg"
+import homepic from "/src/assets/events/ODAY/odayclosing_2024.jpg"
 
 const Hero = () => {
   let [myModal, setMyModal] = useState(false)

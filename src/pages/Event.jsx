@@ -3,8 +3,10 @@ import Card from '/src/components/EventCard'
 import { useNavigate } from "react-router-dom"
 
 //Images
-import Oday from "/src/assets/events/ODAY/odaythumbnail.jpg"
-import SuperSmash from "/src/assets/events/SUPERSMASH/thumbnail.jpg"
+import Oday from "/src/assets/events/ODAY/odaythumbnail_2024.jpg"
+import SuperSmash from "/src/assets/events/SUPERSMASH/supersmash_2024.jpg"
+import sea_connect_2025 from "/src/assets/events/SEA_CONNECT/sea_connect_2025.jpeg"
+
 
 const Event = () => {
   const navigate = useNavigate();
@@ -17,8 +19,9 @@ const Event = () => {
           </div>
       </div>
       <div className='grid lg:grid-cols-3 md:grid-cols-2 grid-cols-1 m-5'>
-          <Card eventimage={Oday} eventname={"SEASA O-Day"} eventdesc={"SEASA welcomes you to HKUST with a fun night of games, making friends, and of course, free food!"} event_link={"https://youtube.com"}/>
-          <Card eventimage={SuperSmash} eventname={"SEASA Super Smash Go"} eventdesc={"Showcase your badminton skills and challenge other players!"} event_link={"https://youtube.com"}/>
+          <Card eventimage={Oday} eventname={"SEASA O-Day"} eventdesc={"SEASA welcomes you to HKUST with a fun night of games, making friends, and of course, free food!"} event_link={"https://www.instagram.com/p/DAS8viFhrpF/?img_index=1"}/>
+          <Card eventimage={SuperSmash} eventname={"SEASA Super Smash Go"} eventdesc={"Showcase your badminton skills and challenge other players!"} event_link={"https://www.instagram.com/p/DIaUcCqz9tC/?img_index=1"}/>
+          <Card eventimage={sea_connect_2025} eventname={"SEASA Connect"} eventdesc={"Wisdom + Aura granted by our beloved & accomplished alumni!"} event_link={"https://www.instagram.com/p/DJtC7v8TX7P/?img_index=1"}/>
       </div>
 
       {/*Learn more button => links to /events*/}
