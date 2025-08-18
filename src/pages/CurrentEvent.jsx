@@ -7,7 +7,7 @@ export const CurrentEvent = () =>{
         <div className="max-w-6xl mx-auto p-8" id='events'> 
             <div className="flex justify-center">
             <div className="text-center md:max-w-xl lg:max-w-3xl ">
-                <h2 className="mt-6 px-6 text-6xl font-semibold">Our Latest Event</h2>
+                <h2 className="mt-6 px-6 text-6xl font-semibold">Our Upcoming Event</h2>
                 <br />
             </div>
             </div>
