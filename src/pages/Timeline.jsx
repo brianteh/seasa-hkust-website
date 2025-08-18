@@ -32,11 +32,12 @@ const Timeline = () => {
                 <div className="border-2-2 absolute border-opacity-20 border-gray-700 h-full border left-1/2"></div>
                 
                 {/* Timeline entries - unchanged */}
-                <RightTimeline timelinedate= {"20 Sep"} timelineimage={Notification} timelinetitle={"Subcommittee - Open Recruitment"} timelinedesc={"Register to become a part of SEASA's inner team!"}/>
-                <LeftTimeline timelinedate= {"02 Oct"} timelineimage={Interview} timelinetitle={"Subcommittee - Closed Recruitment"} timelinedesc={"Deadline to apply for our Subcommitte division."}/>
-                <RightTimeline timelinedate= {"04 - 05 Oct"} timelineimage={Selection} timelinetitle={"Initial Screening Results"} timelinedesc={"Interview applicants are announced."}/>
-                <LeftTimeline timelinedate= {"07 Oct"} timelineimage={Selection} timelinetitle={"Interview"} timelinedesc={"Show us your character through an interview with our Executive Committee members!"}/>
-                <RightTimeline timelinedate= {"08 Oct"} timelineimage={Training} timelinetitle={"Interview Results"} timelinedesc={"Interview results! Did you make it?"}/>
+                <RightTimeline timelinedate= {"15 Sept"} timelineimage={Notification} timelinetitle={"Subcommittee - Open Recruitment"} timelinedesc={"Register to become a part of SEASA's inner team!"}/>
+                <LeftTimeline timelinedate= {"22 Sept"} timelineimage={Interview} timelinetitle={"Subcommittee - Closed Recruitment"} timelinedesc={"Deadline to apply for our Subcommitte division."}/>
+                <RightTimeline timelinedate= {"24 Sept"} timelineimage={Selection} timelinetitle={"Initial Screening Results"} timelinedesc={"Interview applicants are announced."}/>
+                <LeftTimeline timelinedate= {"26 - 28 Sept"} timelineimage={Selection} timelinetitle={"Interview"} timelinedesc={"Show us your character through an interview with our Executive Committee members!"}/>
+                <RightTimeline timelinedate= {"02 Oct"} timelineimage={Training} timelinetitle={"Interview Results"} timelinedesc={"Interview results! Did you make it?"}/>
+                <LeftTimeline timelinedate= {"04 Oct"} timelineimage={Training} timelinetitle={"First General Meeting & Committee Photoshoot"} timelinedesc={"Congratulations on making it through!"}/>
             </div>
         </div>
     </>
