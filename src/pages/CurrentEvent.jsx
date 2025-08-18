@@ -15,19 +15,22 @@ export const CurrentEvent = () =>{
             {/* Content Section (Left on desktop, always first) */}
             <div className="md:w-1/2 w-full">
             <div className="text-center md:max-w-xl lg:max-w-3xl ">
-              <h2 className="mt-6 px-6 text-4xl font-semibold">Event Name</h2>
+              <h2 className="mt-6 px-6 text-4xl font-semibold">SEASA Freshman Orientation</h2>
+              <br/>
             </div>
-             <p className="text-lg mb-6">
-                Something good is always good but also not that good. I am writing this just to show how a paragraph will look like on this website. 
+            <p className="text-lg mb-6 text-justify">
+                SEASA Freshman Orientation is SEASA’s annual orientation event, set to take place on September 5th, 2025. 
+                This gathering is designed to warmly welcome incoming Southeast Asian freshmen to HKUST. 
             </p>
-            <p className="text-lg mb-6">
-                Event Description:
+            <p className="text-lg mb-6 text-justify">
+                Through fun games and shared meals, this event provides a casual and friendly environment for freshmen to meet fellow Southeast Asian students and connect with seniors. 
+                We are excited to have all Southeast Asian HKUST students including Indonesia, Malaysia, Thailand, Philippines, and many more to join us in kicking off the new academic year together!
             </p>
-            <p className="text-lg mb-6">
-                Event Date:
+            <p className="text-lg mb-6 text-justify">
+                <b>Event Date:</b> Sep 5th
             </p>
-            <p className="text-lg mb-6">
-                Venue:
+            <p className="text-lg mb-6 text-justify">
+                <b>Venue:</b> Hall 7 Common Room
             </p>
            {/*Learn more button => links to event_link */}
             <div className="mt-5 flex items-center justify-center gap-x-6 pb-4">
