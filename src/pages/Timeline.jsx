@@ -3,11 +3,12 @@ import LeftTimeline from '/src/components/LeftTimeline'
 import RightTimeline from '/src/components/RightTimeline'
 
 //images
-import Interview from "/src/assets/timeline/interview.jpg"
-import Notification from "/src/assets/timeline/notification.jpg"
-import Selection from "/src/assets/timeline/selection.jpg"
-import Training from "/src/assets/timeline/training.jpg"
 
+import Open from "/src/assets/timeline/open.jpg"
+import Closed from "/src/assets/timeline/close.jpg"
+import Screening from "/src/assets/timeline/initialscreening.jpg"
+import Interview from "/src/assets/timeline/interview2.jpg"
+import Result from "/src/assets/timeline/results.jpg"
 
 const Timeline = () => {
   return (
@@ -32,12 +33,11 @@ const Timeline = () => {
                 <div className="border-2-2 absolute border-opacity-20 border-gray-700 h-full border left-1/2"></div>
                 
                 {/* Timeline entries - unchanged */}
-                <RightTimeline timelinedate= {"15 Sept"} timelineimage={Notification} timelinetitle={"Subcommittee - Open Recruitment"} timelinedesc={"Register to become a part of SEASA's inner team!"}/>
-                <LeftTimeline timelinedate= {"22 Sept"} timelineimage={Interview} timelinetitle={"Subcommittee - Closed Recruitment"} timelinedesc={"Deadline to apply for our Subcommitte division."}/>
-                <RightTimeline timelinedate= {"24 Sept"} timelineimage={Selection} timelinetitle={"Initial Screening Results"} timelinedesc={"Interview applicants are announced."}/>
-                <LeftTimeline timelinedate= {"26 - 28 Sept"} timelineimage={Selection} timelinetitle={"Interview"} timelinedesc={"Show us your character through an interview with our Executive Committee members!"}/>
-                <RightTimeline timelinedate= {"02 Oct"} timelineimage={Training} timelinetitle={"Interview Results"} timelinedesc={"Interview results! Did you make it?"}/>
-                <LeftTimeline timelinedate= {"04 Oct"} timelineimage={Training} timelinetitle={"First General Meeting & Committee Photoshoot"} timelinedesc={"Congratulations on making it through!"}/>
+                <RightTimeline timelinedate= {"15 Sept"} timelineimage={Open} timelinetitle={"Subcommittee - Open Recruitment"} timelinedesc={"Register to become a part of SEASA's inner team!"}/>
+                <LeftTimeline timelinedate= {"22 Sept"} timelineimage={Closed} timelinetitle={"Subcommittee - Closed Recruitment"} timelinedesc={"Deadline to apply for our Subcommittee division."}/>
+                <RightTimeline timelinedate= {"24 Sept"} timelineimage={Screening} timelinetitle={"Initial Screening Results"} timelinedesc={"Interview applicants are announced."}/>
+                <LeftTimeline timelinedate= {"26 - 28 Sept"} timelineimage={Interview} timelinetitle={"Interview"} timelinedesc={"Show us your character through an interview with our Executive Committee members!"}/>
+                <RightTimeline timelinedate= {"02 Oct"} timelineimage={Result} timelinetitle={"Interview Results"} timelinedesc={"Interview results! Did you make it?"}/>
             </div>
         </div>
     </>
