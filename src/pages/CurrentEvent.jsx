@@ -1,7 +1,7 @@
 import CurrentEventPicture from "/src/assets/events/ODAY/odaythumbnail_2024.jpg"
 
 export const CurrentEvent = () =>{
-    const event_link = "https://youtube.com"
+    const event_link = "https://bit.ly/SEASAOday2025"
     return (
         
         <div className="max-w-6xl mx-auto p-8" id='events'> 
