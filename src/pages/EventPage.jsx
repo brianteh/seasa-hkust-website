@@ -1,99 +1,88 @@
-import { useState, useEffect } from 'react';
-import { useLocation } from 'react-router-dom';
+import { useEffect, useRef } from 'react';
 import Card from '/src/components/EventCard';
 import SEO from '/src/components/SEO';
-import { WebPageSchema, EventSchema } from '/src/components/StructuredData';
 import Oday from "/src/assets/events/ODAY/odaythumbnail_2024.jpg"
 import SuperSmash from "/src/assets/events/SUPERSMASH/supersmash_2024.jpg"
 import sea_connect_2025 from "/src/assets/events/SEA_CONNECT/sea_connect_2025.jpeg"
 import sea_odyssey_2024 from "/src/assets/events/SEA_ODYSSEY/sea_odyssey_2024.JPG"
 import sports_week_2024 from "/src/assets/events/SPORTS_WEEK/sports_week_2024.png"
 
-const eventsData = [
-  {
-    id: 'sea-connect-2025',
-    title: 'SEA Connect 2025',
-    description: 'Annual networking event connecting Southeast Asian students with industry professionals and alumni.',
-    date: '2025-03-15',
-    location: {
-      name: 'HKUST Campus',
-      streetAddress: 'Clear Water Bay',
-      addressLocality: 'Sai Kung',
-      addressRegion: 'Hong Kong'
-    },
-    image: sea_connect_2025,
-    price: 0
-  },
-  {
-    id: 'sea-odyssey-2024',
-    title: 'SEA Odyssey 2024',
-    description: 'Cultural showcase featuring performances, food, and exhibitions from Southeast Asian countries.',
-    date: '2024-11-05',
-    location: {
-      name: 'HKUST Atrium',
-      streetAddress: 'Clear Water Bay',
-      addressLocality: 'Sai Kung',
-      addressRegion: 'Hong Kong'
-    },
-    image: sea_odyssey_2024,
-    price: 0
-  },
-  {
-    id: 'sports-week-2024',
-    title: 'SEASA Sports Week 2024',
-    description: 'Friendly sports competition among Southeast Asian student organizations.',
-    date: '2024-10-15',
-    location: {
-      name: 'HKUST Sports Complex',
-      streetAddress: 'Clear Water Bay',
-      addressLocality: 'Sai Kung',
-      addressRegion: 'Hong Kong'
-    },
-    image: sports_week_2024,
-    price: 0
-  }
-];
-
 export const EventPage = () => {
-  const location = useLocation();
-  const [currentEvent, setCurrentEvent] = useState(null);
-  const pageUrl = `https://seasa.su.hkust.edu.hk${location.pathname}`;
+  const section2025Ref = useRef(null);
 
   useEffect(() => {
-    // Extract event ID from URL hash if present
-    const eventId = location.hash.replace('#', '');
-    if (eventId) {
-      const event = eventsData.find(e => e.id === eventId);
-      setCurrentEvent(event);
+    // If there's no hash in the URL, scroll to 2025 section
+    if (!window.location.hash) {
+      section2025Ref.current?.scrollIntoView({ behavior: 'smooth' });
     }
-  }, [location]);
+  }, []);
+
+  // Event data with dates and locations
+  const events2025 = [
+    {
+      id: 'seasa-oday-2025',
+      name: 'SEASA O-Day',
+      description: 'SEASA welcomes you to HKUST with a fun night of games, making friends, and of course, free food!',
+      image: Oday,
+      link: 'https://www.instagram.com/p/DAS8viFhrpF/?img_index=1',
+      date: 'September 5, 2025',
+      location: 'HKUST Campus',
+      time: '6:00 PM - 10:00 PM'
+    },
+    {
+      id: 'super-smash-2025',
+      name: 'SEASA Super Smash Go',
+      description: 'Showcase your badminton skills and challenge other players!',
+      image: SuperSmash,
+      link: 'https://www.instagram.com/p/DIaUcCqz9tC/?img_index=1',
+      date: 'November 15, 2025',
+      location: 'HKUST Sports Hall',
+      time: '2:00 PM - 6:00 PM'
+    },
+    {
+      id: 'sea-connect-2025',
+      name: 'SEASA Connect',
+      description: 'Wisdom + Aura granted by our beloved & accomplished alumni!',
+      image: sea_connect_2025,
+      link: 'https://www.instagram.com/p/DJtC7v8TX7P/?img_index=1',
+      date: 'April 10, 2025',
+      location: 'HKUST Business School',
+      time: '3:00 PM - 5:30 PM'
+    }
+  ];
+
+  const events2024 = [
+    {
+      id: 'sea-odyssey-2024',
+      name: 'SEASA Odyssey',
+      description: 'New people, new environment, new odyssey',
+      image: sea_odyssey_2024,
+      link: 'https://www.instagram.com/stories/highlights/17993240585226510/',
+      date: 'October 15, 2024',
+      location: 'HKUST Campus',
+      time: '6:00 PM - 9:00 PM'
+    },
+    {
+      id: 'sports-week-2024',
+      name: 'SEASA Sports Week',
+      description: 'A week filled with sports is a dope week',
+      image: sports_week_2024,
+      link: 'https://www.instagram.com/p/C0jso1xBkZR/?img_index=1',
+      date: 'November 20-26, 2024',
+      location: 'HKUST Sports Complex',
+      time: '2:00 PM - 6:00 PM Daily'
+    }
+  ];
 
   return (
-    <div className="relative isolate min-h-screen">
+    <main className="relative isolate min-h-screen" itemScope itemType="https://schema.org/ItemList">
       <SEO 
         title="Events | SEASA HKUST"
         description="Discover upcoming events organized by SEASA at HKUST. Join us for cultural celebrations, networking opportunities, and community building activities."
         keywords="SEASA events, HKUST events, Southeast Asian events, cultural events, student activities, HKUST"
+        url={window.location.href}
+        type="events"
       />
-      <WebPageSchema 
-        title="Events | SEASA HKUST"
-        description="Discover upcoming events organized by SEASA at HKUST"
-        url={pageUrl}
-      />
-      
-      {currentEvent && (
-        <EventSchema
-          name={currentEvent.title}
-          startDate={new Date(currentEvent.date).toISOString()}
-          endDate={new Date(new Date(currentEvent.date).setDate(new Date(currentEvent.date).getDate() + 1)).toISOString()}
-          location={currentEvent.location}
-          description={currentEvent.description}
-          image={currentEvent.image}
-          price={currentEvent.price}
-          url={`${pageUrl}#${currentEvent.id}`}
-        />
-      )}
-      
       {/* Background gradient - Top */}
       <div
         className="absolute inset-x-0 -top-40 -z-10 transform-gpu overflow-hidden blur-3xl sm:-top-80"
@@ -122,68 +111,75 @@ export const EventPage = () => {
               />
             </div>
             
-            <div className="py-12">
+            <article className="py-12">
                 {/* Year 2025 Events */}
-                <div className="max-w-6xl mx-auto px-8">
-                    <div className="flex justify-center">
+                <section className="max-w-6xl mx-auto px-8" id="2025" ref={section2025Ref} itemScope itemType="https://schema.org/ItemList">
+                  <meta itemProp="name" content="SEASA 2025 Events" />
+                    <header className="flex justify-center">
                         <div className="text-center md:max-w-xl lg:max-w-3xl">
-                            <h2 className="mt-6 px-6 text-6xl font-semibold">2025 Events</h2>
-                            <h3 className="mt-6 text-2xl">Happiness prevails this year.</h3>
+                            <h1 className="mt-6 px-6 text-6xl font-semibold">2025 Events</h1>
+                            <p className="mt-6 text-2xl">Happiness prevails this year.</p>
                         </div>
-                    </div>
+                    </header>
                     
                     <div className='grid lg:grid-cols-3 md:grid-cols-2 grid-cols-1 my-8 gap-8'>
-                        <Card 
-                            eventimage={Oday} 
-                            eventname={"SEASA O-Day"} 
-                            eventdesc={"SEASA welcomes you to HKUST with a fun night of games, making friends, and of course, free food!"} 
-                            event_link={"https://www.instagram.com/p/DAS8viFhrpF/?img_index=1"}
-                        />
-                        <Card 
-                            eventimage={SuperSmash} 
-                            eventname={"SEASA Super Smash Go"} 
-                            eventdesc={"Showcase your badminton skills and challenge other players!"} 
-                            event_link={"https://www.instagram.com/p/DIaUcCqz9tC/?img_index=1"}
-                        />
-                        <Card 
-                            eventimage={sea_connect_2025} 
-                            eventname={"SEASA Connect"} 
-                            eventdesc={"Wisdom + Aura granted by our beloved & accomplished alumni!"} 
-                            event_link={"https://www.instagram.com/p/DJtC7v8TX7P/?img_index=1"}
-                        />
+                        {events2025.map((event) => (
+                          <article key={event.id} className="event-card" itemScope itemType="https://schema.org/Event">
+                            <Card 
+                              eventimage={event.image}
+                              eventname={event.name}
+                              eventdesc={event.description}
+                              event_link={event.link}
+                              eventDate={event.date}
+                              location={event.location}
+                              time={event.time}
+                            />
+                            <meta itemProp="name" content={event.name} />
+                            <meta itemProp="description" content={event.description} />
+                            <meta itemProp="startDate" content={event.date} />
+                            <meta itemProp="location" content={event.location} />
+                            <meta itemProp="image" content={event.image} />
+                            <meta itemProp="url" content={event.link} />
+                          </article>
+                        ))}
                     </div>
-                </div>
+                </section>
 
-                
-                
                 {/* Year 2024 Events */}
-                <div className="max-w-6xl mx-auto px-8 relative">
-                    <div className="flex justify-center">
+                <section className="max-w-6xl mx-auto px-8 relative" itemScope itemType="https://schema.org/ItemList">
+                  <meta itemProp="name" content="SEASA 2024 Events" />
+                    <header className="flex justify-center">
                         <div className="text-center md:max-w-xl lg:max-w-3xl">
                             <h2 className="text-6xl font-semibold">2024 Events</h2>
-                            <h3 className="mt-4 text-2xl">Best year ever!</h3>
+                            <p className="mt-4 text-2xl">Best year ever!</p>
                         </div>
-                    </div>
+                    </header>
                     
                     <div className='grid lg:grid-cols-3 md:grid-cols-2 grid-cols-1 my-8 gap-8'>
-                        <Card 
-                            eventimage={sea_odyssey_2024} 
-                            eventname={"SEASA Odyssey"} 
-                            eventdesc={"New people, new environment, new odyssey"} 
-                            event_link={"https://www.instagram.com/stories/highlights/17993240585226510/"}
-                        />
-                        <Card 
-                            eventimage={sports_week_2024} 
-                            eventname={"SEASA Sports Week"} 
-                            eventdesc={"A week fill with sports is a dope week"} 
-                            event_link={"https://www.instagram.com/p/C0jso1xBkZR/?img_index=1"}
-                        />
+                        {events2024.map((event) => (
+                          <article key={event.id} className="event-card" itemScope itemType="https://schema.org/Event">
+                            <Card 
+                              eventimage={event.image}
+                              eventname={event.name}
+                              eventdesc={event.description}
+                              event_link={event.link}
+                              eventDate={event.date}
+                              location={event.location}
+                              time={event.time}
+                            />
+                            <meta itemProp="name" content={event.name} />
+                            <meta itemProp="description" content={event.description} />
+                            <meta itemProp="startDate" content={event.date} />
+                            <meta itemProp="location" content={event.location} />
+                            <meta itemProp="image" content={event.image} />
+                            <meta itemProp="url" content={event.link} />
+                          </article>
+                        ))}
                     </div>
-                </div>
-                
-            </div>
-        </div>
+                </section>
+            </article>
+        </main>
     );
-}
+};
 
-export default EventPage
+export default EventPage;
