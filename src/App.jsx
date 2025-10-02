@@ -1,3 +1,4 @@
+import { HelmetProvider } from 'react-helmet-async';
 import '/src/App.css'
 import Navbar from '/src/components/Navbar'
 import Hero from '/src/pages/Hero'
@@ -13,15 +14,20 @@ import CurrentEvent from '/src/pages/CurrentEvent'
 
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom'
 import Contact from './pages/Contact'
+import SEO from './components/SEO'
 
 function App() {
   return (
-    <>
+    <HelmetProvider>
       <Router>
         <Routes>
         <Route path="/" element={
           //Main page
           <>
+            <SEO 
+              title="SEASA - Southeast Asian Student Association"
+              description="Join the Southeast Asian Student Association to celebrate and share the rich cultures of Southeast Asia through various events and activities."
+            />
             <Navbar />
             <Hero />
             <About />
@@ -41,7 +47,7 @@ function App() {
         }/>
         </Routes>
       </Router>
-    </>
+    </HelmetProvider>
   )
 }
 
