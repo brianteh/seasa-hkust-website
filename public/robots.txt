@@ -1,0 +1,27 @@
+# Allow all web crawlers to access all parts of the site
+User-agent: *
+Allow: /
+
+# Sitemap location
+Sitemap: https://seasa.su.hkust.edu.hk/sitemap.xml
+
+# Disallow crawling of build and node_modules directories
+Disallow: /build/
+Disallow: /node_modules/
+
+# Disallow crawling of development and testing URLs
+Disallow: /dev/
+Disallow: /staging/
+Disallow: /test/
+
+# Disallow crawling of source files and configs
+Disallow: /*.js$
+Disallow: /*.css$
+Disallow: /*.scss$
+Disallow: /*.json$
+
+# Crawl-delay can be adjusted if needed to reduce server load
+# Crawl-delay: 10
+
+# Set the preferred host (uncomment and update with your domain when live)
+# Host: yourdomain.com
