@@ -10,7 +10,7 @@ const SEO = ({
   url = typeof window !== 'undefined' ? window.location.href : 'https://seasa.su.hkust.edu.hk',
   keywords = 'SEASA, Southeast Asian Student Association, cultural organization, student club, Asian culture, university club, HKUST, student organization',
   locale = 'en_HK',
-  siteName = 'SEASA @ HKUST'
+  siteName = 'SEASA @ HKUST | South East Asian Student Association in HKUST'
 }) => {
   // Ensure image URL is absolute
   const imageUrl = image.startsWith('http') ? image : `https://seasa.su.hkust.edu.hk${image}`;
