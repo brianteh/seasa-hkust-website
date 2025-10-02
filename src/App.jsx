@@ -15,10 +15,12 @@ import CurrentEvent from '/src/pages/CurrentEvent'
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom'
 import Contact from './pages/Contact'
 import SEO from './components/SEO'
+import { OrganizationSchema } from './components/StructuredData'
 
 function App() {
   return (
     <HelmetProvider>
+      <OrganizationSchema />
       <Router>
         <Routes>
         <Route path="/" element={

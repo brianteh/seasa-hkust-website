@@ -1,18 +1,104 @@
-import Card from '/src/components/EventCard'
+import { useState, useEffect } from 'react';
+import { useLocation } from 'react-router-dom';
+import Card from '/src/components/EventCard';
+import SEO from '/src/components/SEO';
+import { WebPageSchema, EventSchema } from '/src/components/StructuredData';
 import Oday from "/src/assets/events/ODAY/odaythumbnail_2024.jpg"
 import SuperSmash from "/src/assets/events/SUPERSMASH/supersmash_2024.jpg"
 import sea_connect_2025 from "/src/assets/events/SEA_CONNECT/sea_connect_2025.jpeg"
 import sea_odyssey_2024 from "/src/assets/events/SEA_ODYSSEY/sea_odyssey_2024.JPG"
 import sports_week_2024 from "/src/assets/events/SPORTS_WEEK/sports_week_2024.png"
 
+const eventsData = [
+  {
+    id: 'sea-connect-2025',
+    title: 'SEA Connect 2025',
+    description: 'Annual networking event connecting Southeast Asian students with industry professionals and alumni.',
+    date: '2025-03-15',
+    location: {
+      name: 'HKUST Campus',
+      streetAddress: 'Clear Water Bay',
+      addressLocality: 'Sai Kung',
+      addressRegion: 'Hong Kong'
+    },
+    image: sea_connect_2025,
+    price: 0
+  },
+  {
+    id: 'sea-odyssey-2024',
+    title: 'SEA Odyssey 2024',
+    description: 'Cultural showcase featuring performances, food, and exhibitions from Southeast Asian countries.',
+    date: '2024-11-05',
+    location: {
+      name: 'HKUST Atrium',
+      streetAddress: 'Clear Water Bay',
+      addressLocality: 'Sai Kung',
+      addressRegion: 'Hong Kong'
+    },
+    image: sea_odyssey_2024,
+    price: 0
+  },
+  {
+    id: 'sports-week-2024',
+    title: 'SEASA Sports Week 2024',
+    description: 'Friendly sports competition among Southeast Asian student organizations.',
+    date: '2024-10-15',
+    location: {
+      name: 'HKUST Sports Complex',
+      streetAddress: 'Clear Water Bay',
+      addressLocality: 'Sai Kung',
+      addressRegion: 'Hong Kong'
+    },
+    image: sports_week_2024,
+    price: 0
+  }
+];
+
 export const EventPage = () => {
-    return (
-        <div className="relative isolate min-h-screen">
-            {/* Background gradient - Top */}
-            <div
-              className="absolute inset-x-0 -top-40 -z-10 transform-gpu overflow-hidden blur-3xl sm:-top-80"
-              aria-hidden="true"
-            >
+  const location = useLocation();
+  const [currentEvent, setCurrentEvent] = useState(null);
+  const pageUrl = `https://seasa.su.hkust.edu.hk${location.pathname}`;
+
+  useEffect(() => {
+    // Extract event ID from URL hash if present
+    const eventId = location.hash.replace('#', '');
+    if (eventId) {
+      const event = eventsData.find(e => e.id === eventId);
+      setCurrentEvent(event);
+    }
+  }, [location]);
+
+  return (
+    <div className="relative isolate min-h-screen">
+      <SEO 
+        title="Events | SEASA HKUST"
+        description="Discover upcoming events organized by SEASA at HKUST. Join us for cultural celebrations, networking opportunities, and community building activities."
+        keywords="SEASA events, HKUST events, Southeast Asian events, cultural events, student activities, HKUST"
+      />
+      <WebPageSchema 
+        title="Events | SEASA HKUST"
+        description="Discover upcoming events organized by SEASA at HKUST"
+        url={pageUrl}
+      />
+      
+      {currentEvent && (
+        <EventSchema
+          name={currentEvent.title}
+          startDate={new Date(currentEvent.date).toISOString()}
+          endDate={new Date(new Date(currentEvent.date).setDate(new Date(currentEvent.date).getDate() + 1)).toISOString()}
+          location={currentEvent.location}
+          description={currentEvent.description}
+          image={currentEvent.image}
+          price={currentEvent.price}
+          url={`${pageUrl}#${currentEvent.id}`}
+        />
+      )}
+      
+      {/* Background gradient - Top */}
+      <div
+        className="absolute inset-x-0 -top-40 -z-10 transform-gpu overflow-hidden blur-3xl sm:-top-80"
+        aria-hidden="true"
+      >
               <div
                 className="relative left-[calc(50%-11rem)] aspect-[1155/678] w-[36.125rem] -translate-x-1/2 rotate-[30deg] bg-gradient-to-tr from-[#ff80b5] to-[#9089fc] opacity-30 sm:left-[calc(50%-30rem)] sm:w-[72.1875rem]"
                 style={{

@@ -1,3 +1,6 @@
+# SEASA HKUST - robots.txt
+# Last updated: 2025-10-02
+
 # Allow all web crawlers to access all parts of the site
 User-agent: *
 Allow: /
@@ -5,9 +8,39 @@ Allow: /
 # Sitemap location
 Sitemap: https://seasa.su.hkust.edu.hk/sitemap.xml
 
-# Disallow crawling of build and node_modules directories
+# Disallow crawling of technical directories
 Disallow: /build/
 Disallow: /node_modules/
+Disallow: /.git/
+Disallow: /.github/
+
+# Disallow query strings that don't affect content
+Disallow: /*?*
+
+# Allow all crawlers to access all JavaScript and CSS files
+Allow: /*.js$
+Allow: /*.css$
+
+# Crawl-delay: 10
+
+# Additional search engine instructions
+# - Google: https://developers.google.com/search/docs/advanced/robots/robots_txt
+# - Bing: https://www.bing.com/webmasters/help/which-crawlers-does-bing-use-8c184ec0
+
+# Allow all image files for search engines
+Allow: /*.jpg$
+Allow: /*.jpeg$
+Allow: /*.png$
+Allow: /*.gif$
+Allow: /*.webp$
+Allow: /*.svg$
+
+# Allow all asset files
+Allow: /assets/
+Allow: /images/
+
+# Host directive (only needed if you have multiple domains pointing to the same site)
+# Host: seasa.su.hkust.edu.hk
 
 # Disallow crawling of development and testing URLs
 Disallow: /dev/
