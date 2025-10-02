@@ -34,7 +34,10 @@ export const CurrentEvent = () =>{
             </p>
            {/*Learn more button => links to event_link */}
             <div className="mt-5 flex items-center justify-center gap-x-6 pb-4">
-                <button onClick={() => window.open(event_link,"_blank")} className='rounded-md text-black border-transparent py-2 px-4 md:ml-8 hover:bg-white border-solid border-2 hover:border-black hover:text-black duration-500 cursor-pointer'>
+                <button 
+                  onClick={() => window.open(event_link,"_blank")} 
+                  className='relative rounded-md text-black border-black py-2 px-4 md:ml-8 hover:bg-white border-solid border-2 hover:border-black hover:text-black duration-300 cursor-pointer transform hover:-translate-y-1 transition-all shadow-lg hover:shadow-xl hover:shadow-yellow-200/30 animate-pulse hover:animate-none'
+                >
                 Register Now <span aria-hidden="true">→</span>
                 </button>
             </div>
