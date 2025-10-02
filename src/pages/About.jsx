@@ -1,4 +1,5 @@
 import React from "react";
+import SEO from "../components/SEO";
 import ServiceCard from "/src/components/AboutCard";
 import {FaGlobeAmericas} from "react-icons/fa"
 import {BsPeopleFill} from "react-icons/bs"
@@ -7,6 +8,11 @@ import {TbTargetArrow} from "react-icons/tb"
 const Service = () => {
   return (
     <section className="w-full pt-20 pb-12 lg:pt-[120px] lg:pb-[90px]" id="about">
+      <SEO 
+          title="SEASA @ HKUST"
+          description="SEASA is the second largest international organization on HKUST campus, with over 100 members and hosting 20+ events"
+          keywords="SEASA, seasa, Southeast Asian students HKUST, hkust seasa"
+      />
       <div className="">
         <div className="flex items-center">
           <div className="w-full px-4 flex items-center">
