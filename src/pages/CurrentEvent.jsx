@@ -35,11 +35,6 @@ export const CurrentEvent = () => {
             </div>
             
             <div className="max-w-6xl mx-auto px-8">
-                <SEO 
-                    title="Upcoming Event - SEASA Freshman Orientation"
-                    description="Join us for SEASA's Freshman Orientation on September 5th, 2025. A fun-filled event to welcome Southeast Asian freshmen to HKUST with games, food, and new friendships!"
-                    keywords="SEASA Freshman Orientation, HKUST orientation, Southeast Asian students, welcome event, September 5 event, student activities"
-                />
             <div className="flex justify-center">
                 <div className="text-center md:max-w-xl lg:max-w-3xl ">
                     <h2 className="mt-6 px-6 text-6xl font-semibold">Our Upcoming Event</h2>
