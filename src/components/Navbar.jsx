@@ -29,7 +29,7 @@ const Navbar = () => {
       <div className='shadow-md md:flex items-center justify-evenly bg-white py-1 md:px-10 px-7 m-4 rounded-md'>
       <Link to={"home"} spy={true} smooth={true} offset={-100} duration={500}>
         <div className='font-semibold text-2xl cursor-pointer flex items-center text-gray-800'>  
-          <img src={NavLogo} alt="" className='w-28'/>
+          <img src={NavLogo} alt="" className='w-80'/>
         </div>
       </Link>
       

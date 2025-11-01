@@ -38,7 +38,7 @@ const Hero = () => {
           <div className="text-center">
             <h1 className="tracking-tight text-gray-900 text-5xl">
               <img src={test} alt="" className="mx-auto w-60"/>
-              <p className="mt-2 text-amber-950">Southeast Asian <br></br> Students' Association</p>
+              <p className="mt-2 text-amber-950" style={{fontWeight: "bold"}}>Southeast Asian <br></br> Students' Association</p>
             </h1>
             <p className="mt-6 text-lg leading-8 text-gray-600">
               SEASA aspires to create a supportive community that embraces member's cultural diversity whilst celebrating Southeast Asian culture.
@@ -50,7 +50,7 @@ const Hero = () => {
                 smooth={true}
                 offset={-100}
                 duration={500}
-                className='rounded-md text-black border-transparent py-2 px-4 md:ml-8 hover:bg-white border-solid border-2 hover:border-black hover:text-black duration-500 cursor-pointer'
+                className='rounded-md bg-yellow-300 text-black border-transparent py-2 px-4 md:ml-8 hover:bg-yellow-500 border-solid border-2 hover:border-black hover:text-black duration-500 cursor-pointer'
               >
                 Connect With Us <span aria-hidden="true">→</span>
               </Link>
