@@ -7,7 +7,7 @@ import {TbTargetArrow} from "react-icons/tb"
 
 const Service = () => {
   return (
-    <section className="w-full pt-20 pb-12 lg:pt-[120px] lg:pb-[90px]" id="about">
+    <section className="w-full pt-24 pb-16 lg:pt-[80px] lg:pb-[120px]" id="about">
       <SEO 
           title="SEASA @ HKUST"
           description="SEASA is the second largest international organization on HKUST campus, with over 100 members and hosting 20+ events"
@@ -16,20 +16,22 @@ const Service = () => {
       <div className="">
         <div className="flex items-center">
           <div className="w-full px-4 flex items-center">
-            <div className="mx-auto mb-12 w-[1000px] text-center lg:mb-16">
+            <div className="mx-auto mb-9 w-full text-center lg:mb-12">
               {/* <span className="block mb-2 text-lg font-semibold text-primary">
                 Our Services
               </span> */}
-              <h2 className="mb-4 text-3xl font-bold text-dark sm:text-4xl md:text-[40px]">
-                About Us
+              <h2 className="mb-8 text-4xl font-extrabold text-dark sm:text-5xl md:text-6xl lg:text-7xl tracking-tight">
+                Who We Are
               </h2>
-              <p className="">
-              The South East Asian Student Association(SEASA) is part of HKUST which was founded in 2016.
-              SEASA is the second largest international organization on campus, with over 100 members 
-              and hosting 20+ events.
-              Our primary goal is to represent the interests of overseas students while promoting
-              cultural exchange within the campus.
-              </p>
+              <div className="flex justify-center">
+                <p className="max-w-2xl text-lg leading-relaxed">
+                The South East Asian Student Association(SEASA) is part of HKUST which was founded in 2016.
+                SEASA is the second largest international organization on campus, with over 100 members 
+                and hosting 20+ events.
+                Our primary goal is to represent the interests of overseas students while promoting
+                cultural exchange within the campus.
+                </p>
+              </div>
             </div>
           </div>
         </div>
@@ -38,14 +40,14 @@ const Service = () => {
             title="Diverse Community"
             details="We strive to create a diverse community of HKUST students from various cultures and backgrounds."
             icon={
-                <FaGlobeAmericas className="w-16 h-16 text-red-600"/>
+                <FaGlobeAmericas className="w-24 h-24 text-red-600"/>
             }
           />
           <ServiceCard
             title="Unlimited Membership"
             details="Regardless of your background, you are encouraged to become a part of our community."
             icon={
-              <BsPeopleFill className="w-16 h-16 text-cyan-600"/>
+              <BsPeopleFill className="w-24 h-24 text-cyan-600"/>
 
             }
           />
@@ -53,7 +55,7 @@ const Service = () => {
             title="Our Goal"
             details="SEASA is an advocate for all HKUST students and plan to support them all through their experiences."
             icon={
-              <TbTargetArrow className="w-16 h-16 text-yellow-600"/>
+              <TbTargetArrow className="w-24 h-24 text-yellow-600"/>
             }          
             />
 

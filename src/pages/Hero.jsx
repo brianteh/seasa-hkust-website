@@ -34,23 +34,23 @@ const Hero = () => {
           />
         </div>
         
-        <div className="mx-auto max-w-2xl py-32 sm:py-48 lg:py-56">
+        <div className="mx-auto max-w-5xl py-36 sm:py-48 lg:py-60">
           <div className="text-center">
-            <h1 className="tracking-tight text-gray-900 text-5xl">
-              <img src={test} alt="" className="mx-auto w-60"/>
-              <p className="mt-2 text-amber-950" style={{fontWeight: "bold"}}>Southeast Asian <br></br> Students' Association</p>
+            <h1 className="tracking-tight text-gray-900 text-5xl sm:text-6xl lg:text-7xl">
+              <img src={test} alt="" className="mx-auto w-72 sm:w-80 lg:w-96"/>
+              <p className="mt-4 text-amber-950 text-3xl sm:text-4xl lg:text-5xl" style={{fontWeight: "bold"}}>Southeast Asian <br></br> Students' Association</p>
             </h1>
-            <p className="mt-6 text-lg leading-8 text-gray-600">
+            <p className="mt-8 text-xl sm:text-2xl leading-8 text-gray-600 max-w-3xl mx-auto">
               SEASA aspires to create a supportive community that embraces member's cultural diversity whilst celebrating Southeast Asian culture.
             </p>
-            <div className="mt-5 flex items-center justify-center gap-x-6">
+            <div className="mt-8 flex items-center justify-center gap-x-6">
               <Link
                 to="contact"
                 spy={true} 
                 smooth={true}
                 offset={-100}
                 duration={500}
-                className='rounded-md bg-yellow-300 text-black border-transparent py-2 px-4 md:ml-8 hover:bg-yellow-500 border-solid border-2 hover:border-black hover:text-black duration-500 cursor-pointer'
+                className='rounded-md bg-yellow-300 text-black border-transparent py-3 px-6 md:ml-2 hover:bg-yellow-500 border-solid border-2 hover:border-black hover:text-black duration-500 cursor-pointer text-lg font-semibold'
               >
                 Connect With Us <span aria-hidden="true">→</span>
               </Link>
@@ -74,7 +74,7 @@ const Hero = () => {
 
       <Modal onClose={handleClose} visible={myModal}/>
 
-      <div className="relative w-full py-16">
+      <div className="relative w-full py-0">
         <div className="relative w-full max-w-screen-2xl mx-auto">
           <div className="absolute left-0 top-0 w-1/3 z-0">
             <img 
