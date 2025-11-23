@@ -124,7 +124,7 @@ const Hero = () => {
         </div>
       </div> */}
 
-      <div className="h-20 sm:h-24 md:h-32 lg:h-40">
+      <div className="sm:h-3 md:h-4 lg:h-5">
       </div>
     </>
   )

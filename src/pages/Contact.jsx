@@ -4,16 +4,16 @@ import SEASALogo from '/src/assets/SEASALogo.png'
 
 const Contact = () => {
   return (
-    <div className="bg-gray-200 mt-24" id='contact'>
+    <div className="bg-gray-100 mt-24" id='contact'>
       <div className="container mx-auto px-6 py-12">
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
           
           <div className="flex flex-col items-start">
-            <div className="mb-6">
+            <div className="mb-16">
               <img 
                 src={SEASALogo} 
                 alt="SEASA Logo" 
-                className="h-36 w-auto"
+                className="h-20 w-auto"
               />
             </div>
             
@@ -22,31 +22,31 @@ const Contact = () => {
                 href="https://www.facebook.com/seasahkust" 
                 target="_blank" 
                 rel="noopener noreferrer"
-                className="w-10 h-10 bg-white rounded-full flex items-center justify-center hover:bg-gray-100 transition-colors"
+                className="w-10 h-10 bg-yellow-300 rounded-full flex items-center justify-center hover:bg-amber-400 transition-colors"
               >
-                <FaEnvelope className="text-gray-700" />
+                <FaEnvelope className="text-red-600" />
               </a>
               <a 
                 href="https://twitter.com/seasahkust" 
                 target="_blank" 
                 rel="noopener noreferrer"
-                className="w-10 h-10 bg-white rounded-full flex items-center justify-center hover:bg-gray-100 transition-colors"
+                className="w-10 h-10 bg-yellow-300 rounded-full flex items-center justify-center hover:bg-amber-400 transition-colors"
               >
-                <FaLinkedin className="text-gray-700" />
+                <FaLinkedin className="text-red-600" />
               </a>
               <a 
                 href="https://www.instagram.com/seasa_hkustsu" 
                 target="_blank" 
                 rel="noopener noreferrer"
-                className="w-10 h-10 bg-white rounded-full flex items-center justify-center hover:bg-gray-100 transition-colors"
+                className="w-10 h-10 bg-yellow-300 rounded-full flex items-center justify-center hover:bg-amber-400 transition-colors"
               >
-                <FaInstagram className="text-gray-700" />
+                <FaInstagram className="text-red-600" />
               </a>
             </div>
           </div>
 
           <div>
-            <h3 className="text-lg font-semibold text-gray-800 mb-4">About</h3>
+            <h3 className="text-lg font-semibold text-yellow-300 mb-4">About</h3>
             <ul className="space-y-3">
               <li>
                 <a 
@@ -68,7 +68,7 @@ const Contact = () => {
           </div>
 
           <div>
-            <h3 className="text-lg font-semibold text-gray-800 mb-4">Socials</h3>
+            <h3 className="text-lg font-semibold text-yellow-300 mb-4">Socials</h3>
             <ul className="space-y-3">
               <li>
                 <a 
