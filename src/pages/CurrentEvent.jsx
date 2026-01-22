@@ -1,5 +1,6 @@
-import CurrentEventPicture from "/src/assets/events/ODAY/odaythumbnail_2024.jpg"
-import SEO from '../components/SEO'
+//import CurrentEventPicture from "/src/assets/events/ODAY/odaythumbnail_2024.jpg"
+import CurrentEventPicture from "/src/assets/events/test_poster.jpg"
+import CurrentEventContainerSVG from "../assets/events/current_event_container.svg";
 
 export const CurrentEvent = () => {
     const event_link = "https://bit.ly/SEASAOday2025"
@@ -34,60 +35,105 @@ export const CurrentEvent = () => {
               />
             </div>
             
-            <div className="max-w-6xl mx-auto px-8">
-            <div className="flex justify-center">
-                <div className="text-center md:max-w-xl lg:max-w-3xl ">
-                    <h2 className="mt-6 px-6 text-6xl font-semibold">Our Upcoming Event</h2>
-                    <br />
-                </div>
-            </div>
-            <div className="flex flex-col md:flex-row items-center gap-8">
-                {/* Content Section (Left on desktop, always first) */}
-                <div className="md:w-1/2 w-full">
-                <div className="text-center md:max-w-xl lg:max-w-3xl ">
-                  <h2 className="mt-6 px-6 text-4xl font-semibold">SEASA Freshman Orientation</h2>
-                  <br/>
-                </div>
-                <p className="text-lg mb-6 text-justify">
-                    SEASA Freshman Orientation is SEASA’s annual orientation event, set to take place on September 5th, 2025. 
-                    This gathering is designed to warmly welcome incoming Southeast Asian freshmen to HKUST. 
-                </p>
-                <p className="text-lg mb-6 text-justify">
-                    Through fun games and shared meals, this event provides a casual and friendly environment for freshmen to meet fellow Southeast Asian students and connect with seniors. 
-                </p>
-                <p className="text-lg mb-6 text-justify">
-                    <b>Event Date:</b> Sep 5th
-                </p>
-                <p className="text-lg mb-6 text-justify">
-                    <b>Venue:</b> Hall 7 Common Room
-                </p>
-               {/*Learn more button => links to event_link */}
-                <div className="mt-5 flex items-center justify-center gap-x-6 pb-4">
-                    <button 
-                      onClick={() => window.open(event_link,"_blank")} 
-                      className='relative rounded-md text-black border-black py-2 px-4 md:ml-8 hover:bg-white border-solid border-2 hover:border-black hover:text-black duration-300 cursor-pointer transform hover:-translate-y-1 transition-all shadow-lg hover:shadow-xl hover:shadow-yellow-200/30 animate-pulse hover:animate-none'
-                    >
-                    Register Now <span aria-hidden="true">→</span>
-                    </button>
-                </div>
-                </div>
+            {/* <img
+              src="/Image3.png"
+              className="w-[426px] h-[1358px] absolute left-[1994px] top-[1373px] max-w-none"
+              alt="image 3"
+            />
+            <img
+              src="/Image3(1).png"
+              className="w-[274px] h-[880px] absolute left-[271px] top-[934px] max-w-none"
+              alt="image 3"
+            /> */}
 
-                {/* Poster Section (Right on desktop, below on mobile) */}
-                <div className="md:w-3/5 w-full flex justify-center">
-                <div className="w-full h-[40rem] bg-gray-100 flex items-center justify-center text-2xl font-bold rounded-xl overflow-hidden">
-                    <div onClick={()=> window.open(event_link, "_blank")} className="w-full h-full cursor-pointer">
-                      <img 
-                        src={CurrentEventPicture}
-                        alt="SEASA Freshman Orientation event"
-                        className="w-full h-full object-cover"
-                      />
+            <div className="max-w-6xl mx-auto px-8">
+           
+            <div className="relative w-full h-auto max-w-6xl mx-auto px-2">
+              {/** in general, md: for tablet use, lg: for desktop, sm/default for mobile */}
+              <div className="relative w-auto md:h-[170vh] h-[135vh] lg:h-auto overflow-visible rounded-2xl sm:rounded-3xl"> 
+                <img 
+                  src={CurrentEventContainerSVG} 
+                  className="w-[95vw] h-full lg:h-[105vh] max-h-[300vh] h-auto object-cover rounded-2xl sm:rounded-3xl"
+                  alt=""
+                  aria-hidden="true"
+                />
+                <div className="absolute inset-0 flex flex-col p-3 sm:p-4 md:p-6 lg:p-8 pb-8 sm:pb-10 md:pb-12 h-auto">
+                  {/* Title Section - Always on its own row */}
+                  <div className="w-full text-center mb-4 sm:mb-6 md:mb-8">
+                    <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-semibold">Our Upcoming Event</h2>
+                  </div>
+                  
+                  {/* Content + Poster Section - 2 columns on desktop, stacked on mobile */}
+                  <div className="flex-1 flex flex-col lg:flex-row gap-4 md:gap-6 h-auto">
+                    {/* Content Section (Left side) */}
+                    <div className="lg:w-1/2 w-full flex flex-col p-2 sm:p-3 md:p-4 max-h-[70vh] lg:max-h-[90vh] overflow-y-auto scrollbar-thin scrollbar-thumb-gray-400 scrollbar-track-gray-100">
+                      <div className="mb-2 sm:mb-3 md:mb-4">
+                        <h2 className="text-xl sm:text-2xl md:text-3xl font-semibold text-center">SEASA Freshman Orientation</h2>
+                      </div>
+                      
+                      <div className="flex-1 overflow-y-auto pr-1 sm:pr-2">
+                        <p className="text-sm sm:text-base md:text-lg mb-3 sm:mb-4 text-justify">
+                          SEASA Freshman Orientation is SEASA's annual orientation event, set to take place on September 5th, 2025. 
+                          This gathering is designed to warmly welcome incoming Southeast Asian freshmen to HKUST. 
+                        </p>
+                        <p className="text-sm sm:text-base md:text-lg mb-3 sm:mb-4 text-justify">
+                          Through fun games and shared meals, this event provides a casual and friendly environment for freshmen to meet fellow Southeast Asian students and connect with seniors. 
+                        </p>
+                        <div className="space-y-1 sm:space-y-2">
+                          <p className="text-sm sm:text-base md:text-lg">
+                            <b>Event Date:</b> Sep 5th, 2025
+                          </p>
+                          <p className="text-sm sm:text-base md:text-lg">
+                            <b>Venue:</b> Hall 7 Common Room
+                          </p>
+                          <p className="text-sm sm:text-base md:text-lg">
+                            <b>Event Date:</b> Sep 5th, 2025
+                          </p>
+                          <p className="text-sm sm:text-base md:text-lg">
+                            <b>Venue:</b> Hall 7 Common Room
+                          </p>
+                          <p className="text-sm sm:text-base md:text-lg">
+                            <b>Event Date:</b> Sep 5th, 2025
+                          </p>
+                          <p className="text-sm sm:text-base md:text-lg">
+                            <b>Venue:</b> Hall 7 Common Room
+                          </p>
+                        
+                        </div>
+                      </div>
+                      
+                      <div className="mt-3 sm:mt-4 flex justify-center">
+                        <button 
+                          onClick={() => window.open(event_link,"_blank")} 
+                          className='bg-yellow-400 hover:bg-yellow-500 text-black font-medium py-1.5 sm:py-2 px-4 sm:px-6 rounded-md transition-colors duration-300 shadow hover:shadow-md sm:shadow-md hover:shadow-lg transform hover:-translate-y-0.5 text-sm sm:text-base'
+                        >
+                          Register Now <span aria-hidden="true">→</span>
+                        </button>
+                      </div>
                     </div>
+
+                    {/* Poster Section (Right side) */}
+                    <div className="lg:w-1/2 w-full flex items-center justify-center p-2 sm:p-3 md:p-4 mt-4 lg:mt-0">
+                      <div className="w-full h-full flex items-center justify-center overflow-hidden">
+                        {/* Poster Image should roughly be 1200x1778 in aspect ratio */}
+                        <img 
+                          src={CurrentEventPicture}
+                          alt="SEASA Freshman Orientation event"
+                          className="lg:max-w-[40vw] lg:max-h-[80vh] h-[45vh] lg:w-auto lg:h-auto object-contain rounded-2xl sm:rounded-3xl shadow-lg"
+                          loading="lazy"
+                        />
+                      </div>
+                    </div>
+                    
+                  </div>
                 </div>
+              </div>
             </div>
-            </div>
-        </div>
+          </div>
         </div>
     );
 }
 
 export default CurrentEvent
+
+

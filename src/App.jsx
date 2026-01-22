@@ -9,6 +9,7 @@ import Exco from '/src/pages/Exco'
 import Timeline from '/src/pages/Timeline'
 import Merch from '/src/pages/Merch'
 import Merch2 from'/src/pages/Merch2'
+import _Merch from'/src/pages/_Merch'
 import EventPage from '/src/pages/EventPage'
 import CurrentEvent from '/src/pages/CurrentEvent'
 
@@ -37,6 +38,7 @@ function App() {
             <Event />
             <Merch />
             <Merch2 />
+            <_Merch />
             <Exco />
             <Timeline />
             <Contact />

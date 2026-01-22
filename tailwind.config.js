@@ -25,6 +25,10 @@ export default {
       transitionProperty: {
         'all': 'all',
       },
+      fontFamily: {
+        poorRichard: ["--font-poor-richard"],
+        poppins: ["--font-poppins"],
+      },
     },
   },
   plugins: [],
