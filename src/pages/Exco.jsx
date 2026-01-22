@@ -1,6 +1,11 @@
 import React from 'react'
 import ExcoCard from '/src/components/ExcoCard'
 import temp from "/src/assets/default.jpg"
+import leftDecoration from '/src/assets/excos/leftDecoration.svg'
+import rightDecoration from '/src/assets/excos/rightDecoration.svg'
+import excoTitle from '/src/assets/excos/excoTitle.svg'
+import excoFullPicture from '/src/assets/excos/excoFullPicture.jpg'
+import meetTheTeam from '/src/assets/excos/meetTheTeam.svg'
 
 
 
@@ -49,25 +54,65 @@ const SidneyLinkedIn = "https://www.linkedin.com/in/sidney-ribli-49159128a/"
 
 const Exco = () => {
   return (
-    <div>
-        <section className="py-6 dark:bg-gray-800 dark:text-gray-100" id="exco">
-            <div className="container p-4 mx-auto space-y-16 sm:p-10">
-                <div className="space-y-4 text-center">
-                    <h3 className="text-2xl font-bold sm:text-5xl">The SEASA Team</h3>
-                    <p className="text-center">Meet the faces behind SEASA's organization</p>
+    <div className="relative overflow-hidden">
+        <div className="relative w-full min-h-[400px] sm:min-h-[500px] md:min-h-[600px] lg:min-h-[700px] bg-gray-900">
+            {/* Background image */}
+            <img 
+                src={excoFullPicture} 
+                alt="SEASA Team Photo" 
+                className="w-full h-full object-contain"
+            />
+            
+            {/* Overlay with "meet the team" text */}
+            <div className="absolute inset-0 flex items-end justify-center pb-8 md:pb-12 lg:pb-16">
+                <img 
+                    src={meetTheTeam} 
+                    alt="Meet the Team" 
+                    className="w-96 sm:w-108 md:w-120 lg:w-[800px] xl:w-[900px] h-auto"
+                />
+            </div>
+        </div>
+        <section className="py-6 bg-[#1A223B] dark:text-gray-100 relative" id="exco">
+            {/* Left and Right Decorations - z-0 to be behind content */}
+            <div className="absolute left-0 top-16 md:top-24 bottom-0 w-32 md:w-64 lg:w-80 h-auto opacity-90 pointer-events-none z-0">
+                <img 
+                    src={leftDecoration} 
+                    alt="" 
+                    className="w-full h-full object-contain object-left"
+                    aria-hidden="true"
+                />
+            </div>
+
+            <div className="absolute right-0 top-16 md:top-24 bottom-0 w-32 md:w-64 lg:w-80 h-auto opacity-90 pointer-events-none z-0">
+                <img 
+                    src={rightDecoration} 
+                    alt="" 
+                    className="w-full h-full object-contain object-right"
+                    aria-hidden="true"
+                />
+            </div>
+
+            {/* Content container with higher z-index */}
+            <div className="container p-4 mx-auto space-y-16 sm:p-10 relative z-10">
+                <div className="flex justify-center">
+                    <img 
+                        src={excoTitle} 
+                        alt="The SEASA Committee - Meet the faces behind SEASA's organization" 
+                        className="w-full max-w-3xl h-auto"
+                    />
                 </div>
                 
-                {/* Responsive grid layout */}
+                {/* Responsive grid layout with smaller gaps */}
                 <div className="space-y-8">
                     {/* Top row - Leadership */}
-                    <div className='grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 lg:gap-8'>
+                    <div className='grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-0 lg:gap-2'>
                         <ExcoCard excoimage={Alicia} exconame={"Alicia"} excorole={"External VP"} excoinstalink={AliciaIG} excolinkedinlink={AliciaLinkedIn}/>
                         <ExcoCard excoimage={Sophia} exconame={"Sophia"} excorole={"President"} excoinstalink={SophiaIG} excolinkedinlink={SophiaLinkedIn}/>
                         <ExcoCard excoimage={Abigail} exconame={"Abigail"} excorole={"Internal VP"} excoinstalink={AbigailIG} excolinkedinlink={AbigailLinkedIn}/>
                     </div>
                     
                     {/* Middle row - Team members */}
-                    <div className='grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 lg:gap-8'>
+                    <div className='grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-0 lg:gap-2'>
                         <ExcoCard excoimage={Vania} exconame={"Vania"} excorole={"Events and Logistics"} excoinstalink={VaniaIG} excolinkedinlink={VaniaLinkedIn}/>
                         <ExcoCard excoimage={Fiona} exconame={"Fiona"} excorole={"Events and Logistics"} excoinstalink={FionaIG} excolinkedinlink={FionaLinkedIn}/>
                         <ExcoCard excoimage={Aliya} exconame={"Aliya"} excorole={"Secretary"} excoinstalink={AliyaIG} excolinkedinlink={AliyaLinkedIn}/>
@@ -75,7 +120,7 @@ const Exco = () => {
                     </div>
                     
                     {/* Bottom row - Design team */}
-                    <div className='grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 lg:gap-8 lg:justify-items-center'>
+                    <div className='grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-0 lg:gap-2 lg:justify-items-center'>
                         <ExcoCard excoimage={Katharine} exconame={"Katharine"} excorole={"Treasurer"} excoinstalink={KatharineIG} excolinkedinlink={KatharineLinkedIn}/>
                         <ExcoCard excoimage={Carina} exconame={"Carina"} excorole={"Design and Media"} excoinstalink={CarinaIG} excolinkedinlink={CarinaLinkedIn}/>
                         <ExcoCard excoimage={Sidney} exconame={"Sidney"} excorole={"Design and Media"} excoinstalink={SidneyIG} excolinkedinlink={SidneyLinkedIn}/>
