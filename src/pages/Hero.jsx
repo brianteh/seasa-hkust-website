@@ -6,8 +6,6 @@ import { Link } from "react-scroll"
 
 // Images
 import logo from "/src/assets/logo.svg"
-import shapeleft from "/src/assets/shape-left.png"
-import shaperight from "/src/assets/shape-right.png"
 import homepic from "/src/assets/events/ODAY/odayclosing_2024.jpg"
 
 // Flags
