@@ -1,5 +1,5 @@
 
-import Card from '/src/components/EventCard'
+import Card from '/src/components/EventCard2'
 import { useNavigate } from "react-router-dom"
 
 //Images
@@ -49,7 +49,7 @@ const Event = () => {
           </div>
         </div>
         
-        <div className='grid lg:grid-cols-3 md:grid-cols-2 grid-cols-1 m-5'>
+        <div className='grid lg:grid-cols-3 md:grid-cols-2 grid-cols-1 m-5 gap-8'>
           <Card 
             eventimage={Oday} 
             eventname={"SEASA O-Day"} 
