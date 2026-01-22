@@ -7,7 +7,7 @@ const Merch3 = () => {
     <div className="relative py-6">
     <div className="bg-[#4D2A17] min-w-screen min-h-screen lg:w-[100vw] w-[100vw] left-0 top-28">
       {/**On desktop view, text behind pic */}
-      <p className="text-[#FFF] lg:text-[230px] text-[80px] font-extrabold leading-[293px] w-auto h-auto absolute lg:left-[470px] lg:top-[80px] top-[80px] lg:text-right text-center lg:block hidden md:hidden">
+      <p id="merch" className="text-[#FFF] lg:text-[230px] text-[80px] font-extrabold leading-[293px] w-auto h-auto absolute lg:left-[470px] lg:top-[80px] top-[80px] lg:text-right text-center lg:block hidden md:hidden">
         VARSITY 
         JACKET
       </p>
