@@ -13,7 +13,7 @@ const Event = () => {
   return (
       <>
       {/* Past Events Section with Gradient */}
-      <div className="relative py-16">
+      <div className="relative py-16 right-[1vw]">
         {/* Background gradient - Top */}
         {/* <div
           className="absolute inset-x-0 -top-40 -z-10 transform-gpu overflow-hidden blur-3xl sm:-top-80"
@@ -48,8 +48,8 @@ const Event = () => {
             <br />
           </div>
         </div>
-        
-        <div className='grid lg:grid-cols-3 md:grid-cols-2 grid-cols-1 m-5 gap-8'>
+       
+        <div className='grid lg:grid-cols-3 md:grid-cols-2 grid-cols-1 m-5 gap-8 justify-center'>
           <Card 
             eventimage={Oday} 
             eventname={"SEASA O-Day"} 
@@ -69,6 +69,7 @@ const Event = () => {
             event_link={"https://www.instagram.com/p/DJtC7v8TX7P/?img_index=1"}
           />
         </div>
+
 
         {/* Learn more button => links to /events */}
         <div className="mt-5 flex items-center justify-center gap-x-6 pb-4">

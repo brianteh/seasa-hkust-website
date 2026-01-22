@@ -38,18 +38,19 @@ const Merch3 = () => {
     </div>
 
 
-    <div className="min-w-screen min-h-screen relative left-0 top-[-5vh]">
+    <div className="min-w-screen min-h-screen flex flex-col lg:flex-row items-stretch left-0 top-[-5vh] relative">
+      <div className="flex-1 flex justify-center items-center relative min-h-[70vh] lg:min-h-0">
         <img
-        src={merch_pic2}
-        className="lg:w-[70vw] lg:h-[100vh] absolute"
-        alt="Merch 1"
+          src={merch_pic2}
+          className="w-full h-[70vh] lg:h-[100vh] object-cover"
+          alt="Merch 1"
         />
-        <div className="bg-[#DECEC0] lg:w-[29.5vw] lg:h-[99.5vh] lg:top-[0.25vh] absolute lg:left-[70vw] top-[38vh] h-[70vh] w-[100vw]">
-          <p className="text-[#210124] lg:text-[65px] text-[63px] font-extrabold leading-[67px] lg:w-auto lg:h-auto relative lg:top-[30vh] top-[15vh] lg:right-[1vw] lg:text-right text-center tracking-[-0.05em]">
+      </div>
+      <div className="bg-[#DECEC0] w-full lg:w-[29.5vw] flex items-center justify-center lg:h-[100vh] h-[70vh]">
+        <p className="text-[#210124] lg:text-[65px] text-[63px] font-extrabold leading-[67px] lg:w-auto lg:h-auto text-center tracking-[-0.05em]">
           stay tuned for more merch coming your way.
-          </p>
-        </div>
-       
+        </p>
+      </div>
     </div>
     </>
   );
