@@ -1,5 +1,8 @@
 import { HelmetProvider } from 'react-helmet-async';
+
 import '/src/App.css'
+import 'bootstrap-icons/font/bootstrap-icons.css';
+
 import Navbar from '/src/components/Navbar'
 import Hero from '/src/pages/Hero'
 import Event from '/src/pages/Event'
@@ -36,8 +39,6 @@ function App() {
             <About />
             <CurrentEvent/>
             <Event />
-            <Merch />
-            <Merch2 />
             <_Merch />
             <Exco />
             <Timeline />

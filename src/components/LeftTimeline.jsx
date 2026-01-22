@@ -1,34 +1,32 @@
 import React from 'react'
+import { SpineNode } from '/src/pages/Timeline'
+import leftTimelineDetails from '/src/assets/timeline/leftTimelineDetails.svg'
 
-const LeftTimeline = ({ timelinedate, timelineimage, timelinetitle, timelinedesc }) => {
+const LeftTimeline = ({ timelinestep, timelinetitle, status, isoDate }) => {
   return (
-    <div className="mb-16 flex justify-between flex-row-reverse items-center w-full left-timeline">
-      <div className="order-1 w-5/12"></div>
-      
-      {/* Circle indicator for timeline */}
-      <div className="z-20 flex items-center order-1 bg-gray-800 shadow-xl w-6 h-6 rounded-full">
-        <h1 className="mx-auto font-semibold text-lg text-white">•</h1>
-      </div>
-      
+    <div className="mb-16 md:mb-20 flex justify-between items-center w-full left-timeline" role="listitem">
       {/* Card with content */}
-      <div className="order-1 bg-white rounded-lg shadow-xl w-5/12 px-3 py-3 md:px-6 md:py-4 relative">
-        {/* Date badge - adjusted positioning for mobile */}
-        {timelinedate && (
-          <div className="absolute -top-4 -left-2 md:-top-6 md:-left-6 z-30">
-            <div className="bg-indigo-600 text-white px-3 py-1 md:px-5 md:py-2 rounded-full font-bold text-xs md:text-base shadow-lg whitespace-nowrap">
-              {timelinedate}
-            </div>
-          </div>
-        )}
-        
-        <div className="flex flex-col md:flex-row gap-3 items-start md:items-center">
-          <img src={timelineimage} className="w-full md:w-1/3 rounded object-cover object-center" />
-          <div>
-            <h3 className="mb-1 md:mb-3 font-bold text-gray-800 text-base md:text-xl">{timelinetitle}</h3>
-            <p className="text-sm md:text-base leading-snug tracking-wide text-gray-600 text-opacity-100">{timelinedesc}</p>
-          </div>
+      <div className="order-1 w-5/12 flex flex-col items-end">
+        {/* Title with yellow bar background */}
+        <div className="relative w-full max-w-xl">
+          <img 
+            src={leftTimelineDetails} 
+            alt="" 
+            className="absolute inset-0 w-full h-full object-fill"
+            aria-hidden="true"
+          />
+          <h3 className="relative z-10 px-8 py-4 text-base md:text-lg font-bold text-red-700 text-center">
+            {timelinetitle}
+          </h3>
         </div>
       </div>
+      
+      {/* Center spine node */}
+      <div className="order-1">
+        <SpineNode step={timelinestep} status={status} isoDate={isoDate} />
+      </div>
+      
+      <div className="order-1 w-5/12"></div>
     </div>
   )
 }
