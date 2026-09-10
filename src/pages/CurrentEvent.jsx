@@ -1,5 +1,5 @@
 //import CurrentEventPicture from "/src/assets/events/ODAY/odaythumbnail_2024.jpg"
-import CurrentEventPicture from "/src/assets/events/test_poster.jpg"
+import CurrentEventPicture from "/src/assets/events/ODAY/odaythumbnail_2024.jpg"
 import CurrentEventContainerSVG from "../assets/events/current_event_container.svg";
 import leftDecoration from '/src/assets/events/side_swirl_left.svg'
 import rightDecoration from '/src/assets/events/side_swirl_right.svg'
