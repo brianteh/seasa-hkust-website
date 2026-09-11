@@ -11,11 +11,11 @@ import leftDecoration from '/src/assets/timeline/leftDecoration.svg'
 import rightDecoration from '/src/assets/timeline/rightDecoration.svg'
 
 const STEPS = [
-  { step: 1, isoDate: '2025-09-15', title: 'Subcommittee – Open Recruitment', status: 'open' },
-  { step: 2, isoDate: '2025-09-22', title: 'Subcommittee – Closed Recruitment', status: 'open' },
-  { step: 3, isoDate: '2025-09-24', title: 'Initial Screening Results', status: 'open' },
-  { step: 4, isoDate: '2025-09-26', title: 'Interview', status: 'open' },
-  { step: 5, isoDate: '2025-10-02', title: 'Interview Results', status: 'open' },
+  { step: 1, isoDate: '2026-09-11', title: 'Subcommittee – Open Recruitment', status: 'open' },
+  { step: 2, isoDate: '2026-09-21', title: 'Subcommittee – Closed Recruitment', status: 'open' },
+  { step: 3, isoDate: '2026-09-24', title: 'Interview', status: 'open' },
+  { step: 4, isoDate: '2026-09-25', title: 'Interview', status: 'open' },
+  { step: 5, isoDate: '2026-10-01', title: 'Interview Results', status: 'open' },
 ];
 
 export function SpineNode({ step, status, isoDate }) {

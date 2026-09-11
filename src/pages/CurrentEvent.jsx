@@ -86,7 +86,7 @@ export const CurrentEvent = () => {
                       
                       <div className="flex-1 overflow-y-auto pr-1 sm:pr-2">
                         <p className="text-sm sm:text-base md:text-lg mb-3 sm:mb-4 text-center">
-                          SEASA Freshman Orientation is SEASA's annual orientation event, set to take place on September 5th, 2025. 
+                          SEASA Freshman Orientation is SEASA's annual orientation event, set to take place on September 11th, 2026. 
                           This gathering is designed to warmly welcome incoming Southeast Asian freshmen to HKUST. 
                         </p>
                         <p className="text-sm sm:text-base md:text-lg mb-3 sm:mb-4 text-justify">
@@ -96,7 +96,7 @@ export const CurrentEvent = () => {
                           <br />
                           <br />
                           <p className="text-xl sm:text-base md:text-lg">
-                            <i className="bi bi-calendar2-week-fill text-[#3468D0]"> <span className="text-black">Sep 5th, 2025</span></i>
+                            <i className="bi bi-calendar2-week-fill text-[#3468D0]"> <span className="text-black">Sep 11th, 2026</span></i>
                           </p>
                           <p className="text-xl sm:text-base md:text-lg">
                             <i className="bi bi-geo-alt-fill text-[#3468D0]"> <span className="text-black">Hall 7 Common Room</span></i>

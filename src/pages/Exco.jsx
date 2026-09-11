@@ -9,46 +9,46 @@ import meetTheTeam from '/src/assets/excos/meetTheTeam.svg'
 
 
 
+import President from "/src/assets/excos/Joshua.jpeg"
+const PresidentIG = "https://www.instagram.com/joshualoopz/"
+const PresidentLinkedIn = ""
 
-import Alicia from "/src/assets/excos/Alicia.jpg"
-const AliciaIG = "https://www.instagram.com/aliciadstny/"
-const AliciaLinkedIn = "https://www.linkedin.com/in/alicia-destiny-utama"
+import InternalVP from "/src/assets/excos/Abigail.jpeg"
+const InternalVPIG = "https://www.instagram.com/avrx_0405/"
+const InternalVPLinkedIn = "https://www.linkedin.com/in/abigail-vun-83027233a"
 
-import Sophia from "/src/assets/excos/Sophia.jpg"
-const SophiaIG = "https://www.instagram.com/fiasssophia?igsh=MTBzeWI2M2lxbDlrZA%3D%3D&utm_source=qr"
-const SophiaLinkedIn = "https://www.linkedin.com/in/sophia-pannadi-581442325?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=ios_app"
+import ExternalVP from "/src/assets/excos/Ken.jpeg"
+const ExternalVPIG = ""
+const ExternalVPLinkedIn = ""
 
-import Abigail from "/src/assets/excos/Abigail.jpg"
-const AbigailIG = "https://www.instagram.com/avrx_0405/"
-const AbigailLinkedIn = "https://www.linkedin.com/in/abigail-vun-83027233a"
+import Secretary from "/src/assets/excos/Gabby.jpeg"
+const SecretaryIG = ""
+const SecretaryLinkedIn = ""
 
-import Vania from "/src/assets/excos/Vania.jpg"
-const VaniaIG = "https://www.instagram.com/ainavsohw"
-const VaniaLinkedIn = "https://www.linkedin.com/in/aeviales"
+import Finance from "/src/assets/excos/Ryan.jpeg"
+const FinanceIG = ""
+const FinanceLinkedIn = ""
 
-import Fiona from "/src/assets/excos/Fiona.jpg"
-const FionaIG = "https://www.instagram.com/fionakeiraa?igsh=MTR2bHZ1a2wzb285Zg%3D%3D&utm_source=qr"
-const FionaLinkedIn = "https://www.linkedin.com/in/fiona-keira-prajitno-a709891ba?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=ios_app"
+import DNM1 from "/src/assets/excos/Shenia.jpeg"
+const DNM1IG = ""
+const DNM1LinkedIn = ""
 
-import Aliya from "/src/assets/excos/Aliya.jpg"
-const AliyaIG = "https://www.instagram.com/aliyacaryl/"
-const AliyaLinkedIn = "https://www.linkedin.com/in/aliya-reyes-6809b2377/"
+import DNM2 from "/src/assets/excos/Autea.jpeg"
+const DNM2IG = ""
+const DNM2LinkedIn = ""
 
-import Malvin from "/src/assets/excos/Malvin.jpg"
-const MalvinIG = "https://www.instagram.com/malvinyolo/"
-const MalvinLinkedIn = "https://www.linkedin.com/in/malvin-rudh-a25b44292"
+import ENL1 from "/src/assets/excos/Stella.jpeg"
+const ENL1IG = ""
+const ENL1LinkedIn = ""
 
-import Katharine from "/src/assets/excos/Katharine.jpg" 
-const KatharineIG = "https://www.instagram.com/yur.katharine/"
-const KatharineLinkedIn = "https://www.linkedin.com/in/yu-katharine?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=ios_app"
+import ENL2 from "/src/assets/excos/Daniel.jpeg"
+const ENL2IG = ""
+const ENL2LinkedIn = ""
 
-import Carina from "/src/assets/excos/Carina.jpg"
-const CarinaIG = "https://www.instagram.com/carin_chandra/?next=%2F"
-const CarinaLinkedIn = "https://www.linkedin.com/in/carina-chandra-7a98b4319/"
+import IT from "/src/assets/excos/Brian.jpeg"
+const ITIG = ""
+const ITLinkedIn = ""
 
-import Sidney from "/src/assets/excos/Sidney.jpg"
-const SidneyIG = "https://www.instagram.com/riblisidney/"
-const SidneyLinkedIn = "https://www.linkedin.com/in/sidney-ribli-49159128a/"
 
 
 
@@ -106,24 +106,24 @@ const Exco = () => {
                 <div className="space-y-8">
                     {/* Top row - Leadership */}
                     <div className='grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-0 lg:gap-2'>
-                        <ExcoCard excoimage={Alicia} exconame={"Alicia"} excorole={"External VP"} excoinstalink={AliciaIG} excolinkedinlink={AliciaLinkedIn}/>
-                        <ExcoCard excoimage={Sophia} exconame={"Sophia"} excorole={"President"} excoinstalink={SophiaIG} excolinkedinlink={SophiaLinkedIn}/>
-                        <ExcoCard excoimage={Abigail} exconame={"Abigail"} excorole={"Internal VP"} excoinstalink={AbigailIG} excolinkedinlink={AbigailLinkedIn}/>
+                        <ExcoCard excoimage={ExternalVP} exconame={"Ken"} excorole={"External VP"} excoinstalink={ExternalVPIG} excolinkedinlink={ExternalVPLinkedIn}/>
+                        <ExcoCard excoimage={President} exconame={"Joshua"} excorole={"President"} excoinstalink={PresidentIG} excolinkedinlink={PresidentLinkedIn}/>
+                        <ExcoCard excoimage={InternalVP} exconame={"Abigail"} excorole={"Internal VP"} excoinstalink={InternalVPIG} excolinkedinlink={InternalVPLinkedIn}/>
                     </div>
                     
                     {/* Middle row - Team members */}
                     <div className='grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-0 lg:gap-2'>
-                        <ExcoCard excoimage={Vania} exconame={"Vania"} excorole={"Events and Logistics"} excoinstalink={VaniaIG} excolinkedinlink={VaniaLinkedIn}/>
-                        <ExcoCard excoimage={Fiona} exconame={"Fiona"} excorole={"Events and Logistics"} excoinstalink={FionaIG} excolinkedinlink={FionaLinkedIn}/>
-                        <ExcoCard excoimage={Aliya} exconame={"Aliya"} excorole={"Secretary"} excoinstalink={AliyaIG} excolinkedinlink={AliyaLinkedIn}/>
-                        <ExcoCard excoimage={Malvin} exconame={"Malvin"} excorole={"IT"} excoinstalink={MalvinIG} excolinkedinlink={MalvinLinkedIn}/>
+                        <ExcoCard excoimage={ENL1} exconame={"Stella"} excorole={"Events and Logistics"} excoinstalink={ENL1IG} excolinkedinlink={ENL1LinkedIn}/>
+                        <ExcoCard excoimage={ENL2} exconame={"Daniel"} excorole={"Events and Logistics"} excoinstalink={ENL2IG} excolinkedinlink={ENL2LinkedIn}/>
+                        <ExcoCard excoimage={Secretary} exconame={"Gabby"} excorole={"Secretary"} excoinstalink={SecretaryIG} excolinkedinlink={SecretaryLinkedIn}/>
+                        <ExcoCard excoimage={IT} exconame={"Brian"} excorole={"IT"} excoinstalink={ITIG} excolinkedinlink={ITLinkedIn}/>
                     </div>
                     
                     {/* Bottom row - Design team */}
                     <div className='grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-0 lg:gap-2 lg:justify-items-center'>
-                        <ExcoCard excoimage={Katharine} exconame={"Katharine"} excorole={"Treasurer"} excoinstalink={KatharineIG} excolinkedinlink={KatharineLinkedIn}/>
-                        <ExcoCard excoimage={Carina} exconame={"Carina"} excorole={"Design and Media"} excoinstalink={CarinaIG} excolinkedinlink={CarinaLinkedIn}/>
-                        <ExcoCard excoimage={Sidney} exconame={"Sidney"} excorole={"Design and Media"} excoinstalink={SidneyIG} excolinkedinlink={SidneyLinkedIn}/>
+                        <ExcoCard excoimage={Finance} exconame={"Ryan"} excorole={"Treasurer"} excoinstalink={FinanceIG} excolinkedinlink={FinanceLinkedIn}/>
+                        <ExcoCard excoimage={DNM2} exconame={"Autea"} excorole={"Design and Media"} excoinstalink={DNM2IG} excolinkedinlink={DNM2LinkedIn}/>
+                        <ExcoCard excoimage={DNM1} exconame={"Shenia"} excorole={"Design and Media"} excoinstalink={DNM1IG} excolinkedinlink={DNM1LinkedIn}/>
                     </div>
                 </div>
             </div>
