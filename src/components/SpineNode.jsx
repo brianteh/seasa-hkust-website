@@ -1,5 +1,5 @@
 import PropTypes from 'prop-types'
-import timelineItem from '@/assets/timeline/timelineItem.svg'
+import * as images from '@/assets/images.js'
 
 const SpineNode = ({ step, status, isoDate }) => {
   if (status === 'open') {
@@ -10,7 +10,7 @@ const SpineNode = ({ step, status, isoDate }) => {
 
     return (
       <div className="relative z-20 flex items-center justify-center w-24 h-24 md:w-28 md:h-28">
-        <img src={timelineItem} alt="" className="absolute inset-0 w-full h-full" aria-hidden="true" />
+        <img src={images.timelineItem} alt="" className="absolute inset-0 w-full h-full" aria-hidden="true" />
         <div className="relative z-10 text-center leading-tight" aria-label={`Date ${dayMonth} ${year}`}>
           <div className="text-sm md:text-base font-bold text-white">{dayMonth}</div>
           <div className="text-xs md:text-sm font-bold text-white opacity-95">{year}</div>
@@ -22,7 +22,7 @@ const SpineNode = ({ step, status, isoDate }) => {
   // Show the step number for closed items.
   return (
     <div className="relative z-20 flex items-center justify-center w-24 h-24 md:w-28 md:h-28">
-      <img src={timelineItem} alt="" className="absolute inset-0 w-full h-full" aria-hidden="true" />
+      <img src={images.timelineItem} alt="" className="absolute inset-0 w-full h-full" aria-hidden="true" />
       <span className="relative z-10 text-xl md:text-2xl font-bold text-white" aria-label={`Step ${step}`}>
         {step}
       </span>
