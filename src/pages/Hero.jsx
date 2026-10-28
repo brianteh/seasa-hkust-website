@@ -3,8 +3,7 @@ import { Link } from 'react-scroll'
 import BackgroundBlob from '@/components/BackgroundBlob.jsx'
 import { countries } from '@/data/countries.js'
 
-import logo from '@/assets/logo.svg'
-import homepic from '@/assets/events/ODAY/odayclosing_2024.jpg'
+import * as images from '@/assets/images.js'
 
 const Hero = () => (
   <>
@@ -12,7 +11,7 @@ const Hero = () => (
       className="relative isolate px-6 lg:px-8 min-h-screen flex items-center"
       id="home"
       style={{
-        backgroundImage: `url(${homepic})`,
+        backgroundImage: `url(${images.odayClosing2024})`,
         backgroundSize: 'cover',
         backgroundPosition: 'center',
         backgroundRepeat: 'no-repeat',
@@ -23,7 +22,7 @@ const Hero = () => (
       <div className="mx-auto max-w-5xl py-36 sm:py-48 lg:py-60 relative">
         <div className="text-center">
           <h1 className="tracking-tight text-white text-5xl sm:text-6xl lg:text-7xl drop-shadow-lg">
-            <img src={logo} alt="SEASA logo" className="mx-auto w-72 sm:w-80 lg:w-96" />
+            <img src={images.heroLogo} alt="SEASA logo" className="mx-auto w-72 sm:w-80 lg:w-96" />
             <p className="mt-4 text-amber-300 text-3xl sm:text-4xl lg:text-5xl" style={{ fontWeight: 'bold' }}>
               Southeast Asian <br /> Students&apos; Association
             </p>

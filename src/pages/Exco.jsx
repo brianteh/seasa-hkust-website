@@ -2,11 +2,7 @@ import ExcoCard from '@/components/ExcoCard.jsx'
 import SideDecorations from '@/components/SideDecorations.jsx'
 import { exco } from '@/data/exco.js'
 
-import leftDecoration from '@/assets/excos/leftDecoration.svg'
-import rightDecoration from '@/assets/excos/rightDecoration.svg'
-import excoTitle from '@/assets/excos/excoTitle.svg'
-import excoFullPicture from '@/assets/excos/excoFullPicture.jpg'
-import meetTheTeam from '@/assets/excos/meetTheTeam.svg'
+import * as images from '@/assets/images.js'
 
 const ROW_SIZES = [3, 4, 3]
 // On desktop the top row is Ken / Joshua / Abigail so the President sits in
@@ -25,18 +21,18 @@ const excoRows = ROW_SIZES.reduce(
 const Exco = () => (
   <div className="relative overflow-hidden">
     <div className="relative w-full min-h-[400px] sm:min-h-[500px] md:min-h-[600px] lg:min-h-[700px] bg-gray-900">
-      <img src={excoFullPicture} alt="SEASA Team Photo" className="w-full h-full object-contain" />
+      <img src={images.excoFullPicture} alt="SEASA Team Photo" className="w-full h-full object-contain" />
 
       {/* Overlay with "meet the team" text */}
       <div className="absolute inset-0 flex items-end justify-center pb-8 md:pb-12 lg:pb-16">
-        <img src={meetTheTeam} alt="Meet the Team" className="w-96 sm:w-108 md:w-120 lg:w-[800px] xl:w-[900px] h-auto" />
+        <img src={images.meetTheTeam} alt="Meet the Team" className="w-96 sm:w-108 md:w-120 lg:w-[800px] xl:w-[900px] h-auto" />
       </div>
     </div>
 
     <section className="py-6 bg-[#1A223B] dark:text-gray-100 relative" id="exco">
       <SideDecorations
-        left={leftDecoration}
-        right={rightDecoration}
+        left={images.excoLeftDecoration}
+        right={images.excoRightDecoration}
         className="top-16 md:top-24 w-32 md:w-64 lg:w-80 opacity-90"
       />
 
@@ -44,7 +40,7 @@ const Exco = () => (
       <div className="container p-4 mx-auto space-y-16 sm:p-10 relative z-10">
         <div className="flex justify-center">
           <img
-            src={excoTitle}
+            src={images.excoTitle}
             alt="The SEASA Committee - Meet the faces behind SEASA's organization"
             className="w-full max-w-3xl h-auto"
           />
