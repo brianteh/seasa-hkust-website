@@ -1,19 +1,33 @@
-import React from 'react';
-import { Helmet } from 'react-helmet-async';
+import PropTypes from 'prop-types'
+import { Helmet } from 'react-helmet-async'
+import { SITE, DEFAULT_SEO } from '@/data/site.js'
+
+const canonicalForCurrentPath = () => {
+  if (typeof window === 'undefined') return `${SITE.baseUrl}/`
+
+  const path = window.location.pathname.replace(/\/+$/, '')
+  const normalizedPath = path === '/index.html' ? '' : path
+  return `${SITE.baseUrl.replace(/\/$/, '')}${normalizedPath || '/'}`
+}
+
+const absoluteUrl = (value) => {
+  if (/^https?:\/\//i.test(value)) return value
+  return `${SITE.baseUrl.replace(/\/$/, '')}${value.startsWith('/') ? value : `/${value}`}`
+}
 
 const SEO = ({
-  title = 'SEASA - Southeast Asian Student Association',
-  description = 'Join the Southeast Asian Student Association (SEASA) to celebrate and share the rich cultures of Southeast Asia through various events and activities.',
-  name = 'SEASA',
+  title = DEFAULT_SEO.title,
+  description = DEFAULT_SEO.description,
+  name = SITE.name,
   type = 'website',
-  image = '/src/assets/HeaderLogo.png',
-  url = typeof window !== 'undefined' ? window.location.href : 'https://seasa.su.hkust.edu.hk',
-  keywords = 'SEASA, Southeast Asian Student Association, cultural organization, student club, Asian culture, university club, HKUST, student organization',
-  locale = 'en_HK',
-  siteName = 'SEASA @ HKUST | South East Asian Student Association in HKUST'
+  image = SITE.ogImage,
+  keywords = DEFAULT_SEO.keywords,
+  locale = DEFAULT_SEO.locale,
+  siteName = DEFAULT_SEO.siteName,
 }) => {
-  // Ensure image URL is absolute
-  const imageUrl = image.startsWith('http') ? image : `https://seasa.su.hkust.edu.hk${image}`;
+  const canonicalUrl = canonicalForCurrentPath()
+  const imageUrl = absoluteUrl(image)
+
   return (
     <Helmet>
       {/* Standard metadata */}
@@ -26,16 +40,19 @@ const SEO = ({
       {/* Open Graph / Facebook */}
       <meta property="og:type" content={type} />
       <meta property="og:site_name" content={siteName} />
-      <meta property="og:url" content={url} />
+      <meta property="og:url" content={canonicalUrl} />
       <meta property="og:title" content={title} />
       <meta property="og:description" content={description} />
       <meta property="og:image" content={imageUrl} />
       <meta property="og:image:alt" content={title} />
+      <meta property="og:image:type" content="image/jpeg" />
+      <meta property="og:image:width" content="1200" />
+      <meta property="og:image:height" content="630" />
       <meta property="og:locale" content={locale} />
 
       {/* Twitter */}
       <meta name="twitter:card" content="summary_large_image" />
-      <meta name="twitter:url" content={url} />
+      <meta name="twitter:url" content={canonicalUrl} />
       <meta name="twitter:title" content={title} />
       <meta name="twitter:description" content={description} />
       <meta name="twitter:image" content={imageUrl} />
@@ -44,30 +61,20 @@ const SEO = ({
       <meta name="twitter:creator" content="@seasa_hkust" />
 
       {/* Canonical URL */}
-      <link rel="canonical" href={url} />
-      
-      {/* Additional meta tags for better SEO */}
-      <meta name="theme-color" content="#1a237e" />
-      <link rel="apple-touch-icon" href="/src/assets/HeaderLogo.png" />
-      <link rel="icon" type="image/png" href="/src/assets/HeaderLogo.png" />
-      <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-      
-      {/* Structured data for organization */}
-      <script type="application/ld+json">
-        {JSON.stringify({
-          "@context": "https://schema.org",
-          "@type": "Organization",
-          "name": "Southeast Asian Student Association (SEASA) @ HKUST",
-          "url": "https://seasa.su.hkust.edu.hk",
-          "logo": "https://seasa.su.hkust.edu.hk/src/assets/HeaderLogo.png",
-          "sameAs": [
-            "https://www.instagram.com/seasa_hkust/",
-            "https://www.facebook.com/seasahkust/"
-          ]
-        })}
-      </script>
+      <link rel="canonical" href={canonicalUrl} />
     </Helmet>
-  );
-};
+  )
+}
 
-export default SEO;
+SEO.propTypes = {
+  title: PropTypes.string,
+  description: PropTypes.string,
+  name: PropTypes.string,
+  type: PropTypes.string,
+  image: PropTypes.string,
+  keywords: PropTypes.string,
+  locale: PropTypes.string,
+  siteName: PropTypes.string,
+}
+
+export default SEO
