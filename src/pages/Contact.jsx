@@ -1,6 +1,6 @@
 import SocialLinks from '@/components/SocialLinks.jsx'
 import { SITE } from '@/data/site.js'
-import SEASALogo from '@/assets/seasaLogo.svg'
+import * as images from '@/assets/images.js'
 
 const Contact = () => (
   <div className="bg-[#5C4033] mt-24" id="contact">
@@ -8,7 +8,7 @@ const Contact = () => (
       <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
         <div className="flex flex-col items-start">
           <div className="mb-16">
-            <img src={SEASALogo} alt="SEASA Logo" className="h-20 w-auto" />
+            <img src={images.contactLogo} alt="SEASA Logo" className="h-20 w-auto" />
           </div>
           <SocialLinks />
         </div>

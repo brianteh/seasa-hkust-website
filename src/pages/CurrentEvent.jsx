@@ -1,9 +1,6 @@
 import SideDecorations from '@/components/SideDecorations.jsx'
 import { EventSchema } from '@/components/StructuredData.jsx'
-import CurrentEventPicture from '@/assets/events/ODAY/odaythumbnail_2024.jpg'
-import CurrentEventContainerSVG from '@/assets/events/current_event_container.svg'
-import leftDecoration from '@/assets/events/side_swirl_left.svg'
-import rightDecoration from '@/assets/events/side_swirl_right.svg'
+import * as images from '@/assets/images.js'
 
 const EVENT_LINK = 'https://bit.ly/SEASAOday2025'
 
@@ -20,7 +17,7 @@ const UPCOMING_EVENT = {
     postalCode: '999077',
     addressCountry: 'HK',
   },
-  image: CurrentEventPicture,
+  image: images.odayThumbnail2024,
   url: EVENT_LINK,
 }
 
@@ -28,15 +25,15 @@ export const CurrentEvent = () => (
   <div className="relative isolate py-10 sm:py-12" id="events">
     <EventSchema {...UPCOMING_EVENT} />
     <SideDecorations
-      left={leftDecoration}
-      right={rightDecoration}
+      left={images.eventLeftDecoration}
+      right={images.eventRightDecoration}
       className="top-16 md:top-24 w-32 md:w-64 lg:w-80 opacity-90"
     />
 
     <div className="relative z-10 mx-auto max-w-6xl px-4 sm:px-6">
       <div className="relative isolate overflow-hidden rounded-2xl sm:rounded-3xl">
         <img
-          src={CurrentEventContainerSVG}
+          src={images.currentEventContainer}
           alt=""
           aria-hidden="true"
           className="pointer-events-none absolute inset-0 h-full w-full"
@@ -92,7 +89,7 @@ export const CurrentEvent = () => (
             {/* Event poster */}
             <div className="flex justify-center">
               <img
-                src={CurrentEventPicture}
+                src={images.odayThumbnail2024}
                 alt="SEASA Freshman Orientation event"
                 className="h-auto w-full max-w-md rounded-xl object-cover shadow-lg sm:max-w-xl lg:max-h-[52vh] lg:max-w-full lg:rounded-2xl"
                 loading="lazy"

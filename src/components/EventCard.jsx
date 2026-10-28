@@ -1,6 +1,6 @@
 import PropTypes from 'prop-types'
 import EventMeta from '@/components/EventMeta.jsx'
-import EventCardSVG from '@/assets/events/event_card.svg'
+import * as images from '@/assets/images.js'
 
 const moreDetailsClass =
   'relative rounded-md text-black border-black py-2 px-6 hover:bg-white border-solid border-2 hover:border-black hover:text-black duration-300 cursor-pointer transform hover:-translate-y-1 transition-all shadow-lg hover:shadow-xl hover:shadow-yellow-200/30 animate-pulse hover:animate-none focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-blue-500'
@@ -9,7 +9,7 @@ const EventCard = ({ eventimage, eventname, eventdesc, event_link, eventDate, lo
   if (variant === 'styled') {
     return (
       <div className="relative w-full max-w-[495px] min-h-[400px] sm:min-h-[479px] m-2 sm:m-4 overflow-hidden rounded-2xl">
-        <img src={EventCardSVG} className="absolute inset-0 w-full h-full object-fill" alt="" aria-hidden="true" />
+        <img src={images.eventCard} className="absolute inset-0 w-full h-full object-fill" alt="" aria-hidden="true" />
         <div className="relative flex h-full flex-col">
           <a
             href={event_link}

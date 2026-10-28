@@ -1,14 +1,14 @@
 // Central source of truth for site-wide constants (brand, URLs, contact, socials).
 // Update these once and every component stays in sync.
 
-import headerLogo from '@/assets/HeaderLogo.png'
+import * as images from '@/assets/images.js'
 
 export const SITE = {
   name: 'SEASA',
   fullName: 'Southeast Asian Student Association (SEASA) @ HKUST',
   shortName: 'SEASA HKUST',
   baseUrl: 'https://seasa.su.hkust.edu.hk',
-  logo: headerLogo,
+  logo: images.headerLogo,
   ogImage: '/og-image.jpg',
   email: 'su_seasa@connect.ust.hk',
   socials: {

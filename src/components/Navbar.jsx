@@ -1,6 +1,6 @@
 import { useState } from 'react'
 import { Link } from 'react-scroll'
-import NavLogo from '@/assets/SEASALogo.png'
+import * as images from '@/assets/images.js'
 
 const NAV_LINKS = [
   { name: 'About', link: 'about' },
@@ -19,7 +19,7 @@ const Navbar = () => {
       <div className="shadow-md flex items-center justify-between md:justify-evenly bg-white py-1 md:px-6 lg:px-10 px-4 sm:px-7 m-4 rounded-md">
         <Link to="home" spy smooth offset={-100} duration={500} className="min-w-0 flex-1 md:flex-none">
           <div className="font-semibold text-2xl cursor-pointer flex items-center text-gray-800">
-            <img src={NavLogo} alt="SEASA logo" className="w-full md:w-56 lg:w-72 xl:w-80" />
+            <img src={images.navLogo} alt="SEASA logo" className="w-full md:w-56 lg:w-72 xl:w-80" />
           </div>
         </Link>
 
